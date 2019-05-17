@@ -24,7 +24,7 @@ namespace Hearthstone
         List<Card> lstP1Hand = new List<Card>();
         List<Card> lstP2Hand = new List<Card>();
 
-        
+        int intCountHand = 0;
 
         int intCounter = 0;//declare counter for the loop
         //declaring variables for the inside of the loop
@@ -260,20 +260,21 @@ namespace Hearthstone
         public void DrawCard()
         {
             var intEndOfList = 0;
-            int intCountHand = 0;
+           
 
             intEndOfList = lstPlayer1.Count - 1;
-            MessageBox.Show(Convert.ToString(intEndOfList));
-            lstP1Hand[intCountHand].Name = lstPlayer1[intEndOfList - 1].Name;
-            lstP1Hand[intCountHand].Attack = lstPlayer1[intEndOfList - 1].Attack;
-            lstP1Hand[intCountHand].Health = lstPlayer1[intEndOfList].Health;
-            lstP1Hand[intCountHand].ManaCost = lstPlayer1[intEndOfList].ManaCost;
-            lstP1Hand[intCountHand].Effect = lstPlayer1[intEndOfList].Effect;
-
+            
+            lstP1Hand.Add( lstPlayer1[intEndOfList]);
+            
             lstPlayer1.RemoveAt(intEndOfList);
-
+            
+            MessageBox.Show(lstP1Hand[intCountHand].Name + "\n" + lstPlayer1[intEndOfList - 1].Name);
+            //DISPLAY HAND IN LABEL
             intCountHand++;
+            
         }
+
+        //PUBLIC VOID FOR P2 DRAW CARD
 
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -281,6 +282,11 @@ namespace Hearthstone
             Player1List();
             Player2List();
 
+            
+        }
+
+        private void btnDrawCard_Click(object sender, EventArgs e)
+        {
             DrawCard();
         }
     }

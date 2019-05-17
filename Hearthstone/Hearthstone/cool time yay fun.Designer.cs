@@ -32,6 +32,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lblDeck2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDrawCard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDeck1
@@ -71,11 +72,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "label1";
             // 
+            // btnDrawCard
+            // 
+            this.btnDrawCard.Location = new System.Drawing.Point(338, 85);
+            this.btnDrawCard.Name = "btnDrawCard";
+            this.btnDrawCard.Size = new System.Drawing.Size(75, 23);
+            this.btnDrawCard.TabIndex = 6;
+            this.btnDrawCard.Text = "button1";
+            this.btnDrawCard.UseVisualStyleBackColor = true;
+            this.btnDrawCard.Click += new System.EventHandler(this.btnDrawCard_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDrawCard);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDeck2);
             this.Controls.Add(this.btnStart);
@@ -92,6 +104,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblDeck2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDrawCard;
     }
 }
 
