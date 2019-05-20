@@ -24,9 +24,16 @@ namespace Hearthstone
         List<Card> lstP1Hand = new List<Card>();
         List<Card> lstP2Hand = new List<Card>();
 
+        int intHealth1 = 30;
+        int intHealth2 = 30;
+        int intMana1 = 0;
+        int intMana2 = 0;
+        
         int intEndOfList = 0;
 
         int intCountHand = 0;
+
+        int intCountTurn = 0;
 
         int intCounter = 0;//declare counter for the loop
         //declaring variables for the inside of the loop
@@ -233,7 +240,11 @@ namespace Hearthstone
 
             lstPlayer1.AddRange(arrayP1Deck);
 
-            
+            for (int i = 0; i < 4; i++)
+            {
+                DrawCardP1();
+            }
+
         }
         public void Player2List()
         {
@@ -250,7 +261,10 @@ namespace Hearthstone
 
             lstPlayer2.AddRange(arrayP2Deck);
 
-            
+            for (int i = 0; i < 4; i++)
+            {
+                DrawCardP2();
+            }
         }
 
         public void DrawCardP1()
@@ -277,9 +291,12 @@ namespace Hearthstone
 
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        public void Mana()
         {
+            intMana1 = intCountTurn;
+            intMana2 = intCountTurn;
             
+            if (intMana1 )
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -287,6 +304,14 @@ namespace Hearthstone
             StartUp();
             Player1List();
             Player2List();
+
+            lblHealth1.Text = Convert.ToString(intHealth1);
+            lblHealth2.Text = Convert.ToString(intHealth2);
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            intCountTurn++;
         }
     }
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,6 +43,8 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.btnEnd = new System.Windows.Forms.Button();
+            this.lblHealth2 = new System.Windows.Forms.Label();
+            this.lblHealth1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,16 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(37, 263);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // pictureBox1
             // 
@@ -190,12 +181,33 @@
             this.btnEnd.TabIndex = 18;
             this.btnEnd.Text = "End Turn";
             this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
+            // 
+            // lblHealth2
+            // 
+            this.lblHealth2.AutoSize = true;
+            this.lblHealth2.Location = new System.Drawing.Point(533, 14);
+            this.lblHealth2.Name = "lblHealth2";
+            this.lblHealth2.Size = new System.Drawing.Size(38, 13);
+            this.lblHealth2.TabIndex = 19;
+            this.lblHealth2.Text = "Health";
+            // 
+            // lblHealth1
+            // 
+            this.lblHealth1.AutoSize = true;
+            this.lblHealth1.Location = new System.Drawing.Point(533, 555);
+            this.lblHealth1.Name = "lblHealth1";
+            this.lblHealth1.Size = new System.Drawing.Size(38, 13);
+            this.lblHealth1.TabIndex = 20;
+            this.lblHealth1.Text = "Health";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 613);
+            this.Controls.Add(this.lblHealth1);
+            this.Controls.Add(this.lblHealth2);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
@@ -211,7 +223,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnStart);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -230,11 +241,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -250,6 +261,8 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.Button btnEnd;
+        private System.Windows.Forms.Label lblHealth2;
+        private System.Windows.Forms.Label lblHealth1;
     }
 }
 
