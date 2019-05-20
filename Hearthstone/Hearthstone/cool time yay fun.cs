@@ -18,11 +18,11 @@ namespace Hearthstone
 
         Random randomCard = new Random();
 
-        public static List<Card> lstPlayer1 = new List<Card>();
-        public static List<Card> lstPlayer2 = new List<Card>();
+        List<Card> lstPlayer1 = new List<Card>();
+        List<Card> lstPlayer2 = new List<Card>();
 
-        public static List<Card> lstP1Hand = new List<Card>();
-        public static List<Card> lstP2Hand = new List<Card>();
+        List<Card> lstP1Hand = new List<Card>();
+        List<Card> lstP2Hand = new List<Card>();
 
         int intEndOfList = 0;
 
@@ -282,6 +282,12 @@ namespace Hearthstone
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            StartUp();
+            Player1List();
+            Player2List();
+        }
     }
 
     public class Card
@@ -291,6 +297,7 @@ namespace Hearthstone
         public int Health { get; set; }
         public int ManaCost { get; set; }
         public bool Effect { get; set; } //fix this
+        public PictureBox Picture { get; set;}
     }
 }
 
