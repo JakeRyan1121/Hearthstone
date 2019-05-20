@@ -45,6 +45,8 @@
             this.btnEnd = new System.Windows.Forms.Button();
             this.lblHealth2 = new System.Windows.Forms.Label();
             this.lblHealth1 = new System.Windows.Forms.Label();
+            this.lblMana1 = new System.Windows.Forms.Label();
+            this.lblMana2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -201,11 +203,31 @@
             this.lblHealth1.TabIndex = 20;
             this.lblHealth1.Text = "Health";
             // 
+            // lblMana1
+            // 
+            this.lblMana1.AutoSize = true;
+            this.lblMana1.Location = new System.Drawing.Point(678, 555);
+            this.lblMana1.Name = "lblMana1";
+            this.lblMana1.Size = new System.Drawing.Size(34, 13);
+            this.lblMana1.TabIndex = 21;
+            this.lblMana1.Text = "Mana";
+            // 
+            // lblMana2
+            // 
+            this.lblMana2.AutoSize = true;
+            this.lblMana2.Location = new System.Drawing.Point(681, 14);
+            this.lblMana2.Name = "lblMana2";
+            this.lblMana2.Size = new System.Drawing.Size(34, 13);
+            this.lblMana2.TabIndex = 22;
+            this.lblMana2.Text = "Mana";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 613);
+            this.Controls.Add(this.lblMana2);
+            this.Controls.Add(this.lblMana1);
             this.Controls.Add(this.lblHealth1);
             this.Controls.Add(this.lblHealth2);
             this.Controls.Add(this.btnEnd);
@@ -263,6 +285,8 @@
         private System.Windows.Forms.Button btnEnd;
         private System.Windows.Forms.Label lblHealth2;
         private System.Windows.Forms.Label lblHealth1;
+        private System.Windows.Forms.Label lblMana1;
+        private System.Windows.Forms.Label lblMana2;
     }
 }
 

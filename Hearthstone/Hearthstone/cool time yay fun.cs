@@ -293,10 +293,21 @@ namespace Hearthstone
 
         public void Mana()
         {
-            intMana1 = intCountTurn;
-            intMana2 = intCountTurn;
+            intCountTurn++;
             
-            if (intMana1 )
+            if (intCountTurn <= 10)
+            {
+                intMana1 = intCountTurn;
+                intMana2 = intCountTurn;
+            }
+            else
+            {
+                intMana1 = 10;
+                intMana2 = 10;
+            }
+
+            lblMana1.Text = Convert.ToString(intMana1);
+            lblMana2.Text = Convert.ToString(intMana2);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -304,14 +315,14 @@ namespace Hearthstone
             StartUp();
             Player1List();
             Player2List();
-
+            Mana();
             lblHealth1.Text = Convert.ToString(intHealth1);
             lblHealth2.Text = Convert.ToString(intHealth2);
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
-            intCountTurn++;
+            Mana();
         }
     }
 
@@ -322,7 +333,7 @@ namespace Hearthstone
         public int Health { get; set; }
         public int ManaCost { get; set; }
         public bool Effect { get; set; } //fix this
-        public PictureBox Picture { get; set;}
+        public PictureBox Picture { get; set; }
     }
 }
 
