@@ -279,18 +279,7 @@ namespace Hearthstone
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (radTwoPlayer.Checked == true)
-            {
-                this.Hide();
-                Two_Player_Battle form2 = new Two_Player_Battle();
-                form2.ShowDialog();
-            }
-            else if (radAdventure.Checked == true)
-            {
-                this.Hide();
-                Adventure form2 = new Adventure();
-                form2.ShowDialog();
-            }
+            
         }
 
     }
