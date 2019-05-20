@@ -8,3 +8,13 @@ C:\Users\9352199\Source\Repos\Hearthstone3\Hearthstone\Hearthstone\bin\Debug\Hea
 C:\Users\9352199\Source\Repos\Hearthstone3\Hearthstone\Hearthstone\bin\Debug\Hearthstone.pdb
 C:\Users\9352199\Source\Repos\Hearthstone3\Hearthstone\Hearthstone\obj\Debug\Hearthstone.exe
 C:\Users\9352199\Source\Repos\Hearthstone3\Hearthstone\Hearthstone\obj\Debug\Hearthstone.pdb
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\bin\Debug\Hearthstone.exe.config
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\bin\Debug\Hearthstone.exe
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\bin\Debug\Hearthstone.pdb
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.csprojAssemblyReference.cache
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.Properties.Resources.resources
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.Form1.resources
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.csproj.GenerateResource.cache
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.csproj.CoreCompileInputs.cache
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.exe
+C:\Users\9352199\Source\Repos\Hearthstone4\Hearthstone\Hearthstone\obj\Debug\Hearthstone.pdb

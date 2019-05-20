@@ -18,11 +18,13 @@ namespace Hearthstone
 
         Random randomCard = new Random();
 
-        List<Card> lstPlayer1 = new List<Card>();
-        List<Card> lstPlayer2 = new List<Card>();
+        public static List<Card> lstPlayer1 = new List<Card>();
+        public static List<Card> lstPlayer2 = new List<Card>();
 
-        List<Card> lstP1Hand = new List<Card>();
-        List<Card> lstP2Hand = new List<Card>();
+        public static List<Card> lstP1Hand = new List<Card>();
+        public static List<Card> lstP2Hand = new List<Card>();
+
+        int intEndOfList = 0;
 
         int intCountHand = 0;
 
@@ -231,10 +233,7 @@ namespace Hearthstone
 
             lstPlayer1.AddRange(arrayP1Deck);
 
-            for (int i = 0; i < 30; i++)
-            {
-                lblDeck1.Text += lstPlayer1[i].Name + "\n";
-            }
+            
         }
         public void Player2List()
         {
@@ -251,44 +250,49 @@ namespace Hearthstone
 
             lstPlayer2.AddRange(arrayP2Deck);
 
-            for (int i = 0; i < 30; i++)
-            { 
-                lblDeck2.Text += lstPlayer2[i].Name + "\n";
-            }
+            
         }
 
-        public void DrawCard()
+        public void DrawCardP1()
         {
-            var intEndOfList = 0;
-           
-
             intEndOfList = lstPlayer1.Count - 1;
             
             lstP1Hand.Add( lstPlayer1[intEndOfList]);
             
             lstPlayer1.RemoveAt(intEndOfList);
             
-            MessageBox.Show(lstP1Hand[intCountHand].Name + "\n" + lstPlayer1[intEndOfList - 1].Name);
-            //DISPLAY HAND IN LABEL
             intCountHand++;
             
         }
 
-        //PUBLIC VOID FOR P2 DRAW CARD
+        public void DrawCardP2()
+        {
+            intEndOfList = lstPlayer2.Count - 1;
+
+            lstP2Hand.Add(lstPlayer2[intEndOfList]);
+
+            lstPlayer2.RemoveAt(intEndOfList);
+            
+            intCountHand++;
+
+        }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            StartUp();
-            Player1List();
-            Player2List();
-
-            
+            if (radTwoPlayer.Checked == true)
+            {
+                this.Hide();
+                Two_Player_Battle form2 = new Two_Player_Battle();
+                form2.ShowDialog();
+            }
+            else if (radAdventure.Checked == true)
+            {
+                this.Hide();
+                Adventure form2 = new Adventure();
+                form2.ShowDialog();
+            }
         }
 
-        private void btnDrawCard_Click(object sender, EventArgs e)
-        {
-            DrawCard();
-        }
     }
 
     public class Card
