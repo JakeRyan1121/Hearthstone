@@ -47,6 +47,7 @@
             this.lblHealth1 = new System.Windows.Forms.Label();
             this.lblMana1 = new System.Windows.Forms.Label();
             this.lblMana2 = new System.Windows.Forms.Label();
+            this.lstVisualHand = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -221,11 +222,20 @@
             this.lblMana2.TabIndex = 22;
             this.lblMana2.Text = "Mana";
             // 
+            // lstVisualHand
+            // 
+            this.lstVisualHand.FormattingEnabled = true;
+            this.lstVisualHand.Location = new System.Drawing.Point(3, 376);
+            this.lstVisualHand.Name = "lstVisualHand";
+            this.lstVisualHand.Size = new System.Drawing.Size(165, 225);
+            this.lstVisualHand.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 613);
+            this.Controls.Add(this.lstVisualHand);
             this.Controls.Add(this.lblMana2);
             this.Controls.Add(this.lblMana1);
             this.Controls.Add(this.lblHealth1);
@@ -287,6 +297,7 @@
         private System.Windows.Forms.Label lblHealth1;
         private System.Windows.Forms.Label lblMana1;
         private System.Windows.Forms.Label lblMana2;
+        private System.Windows.Forms.ListBox lstVisualHand;
     }
 }
 
