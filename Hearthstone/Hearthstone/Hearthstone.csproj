@@ -61,6 +61,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="cool time yay fun.resx">
       <DependentUpon>cool time yay fun.cs</DependentUpon>
@@ -77,6 +78,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Arcane_Explosion%2856%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Arcane_Intellect%28489%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Arcane_Missiles%28589%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Arcane_Shot%28167%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Bloodfen_Raptor%28576%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Boulderfist_Ogre%2860%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Fireball%28522%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Murloc_Raider%2855%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Nightblade%28184%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Novice_Engineer%28435%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Oasis_Snapjaw%2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Polymorph%28595%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-River_Crocolisk%28535%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Sen%27jin_Shieldmasta%28326%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Wolfrider%28174%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
