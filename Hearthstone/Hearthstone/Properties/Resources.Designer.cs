@@ -63,9 +63,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Arcane_Explosion_56_ {
+        public static System.Drawing.Bitmap Arcane_Explosion {
             get {
-                object obj = ResourceManager.GetObject("_200px_Arcane_Explosion_56_", resourceCulture);
+                object obj = ResourceManager.GetObject("Arcane_Explosion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Arcane_Intellect_489_ {
+        public static System.Drawing.Bitmap Arcane_Intellect {
             get {
-                object obj = ResourceManager.GetObject("_200px_Arcane_Intellect_489_", resourceCulture);
+                object obj = ResourceManager.GetObject("Arcane_Intellect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Arcane_Missiles_589_ {
+        public static System.Drawing.Bitmap Arcane_Missiles {
             get {
-                object obj = ResourceManager.GetObject("_200px_Arcane_Missiles_589_", resourceCulture);
+                object obj = ResourceManager.GetObject("Arcane_Missiles", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Arcane_Shot_167_ {
+        public static System.Drawing.Bitmap Arcane_Shot {
             get {
-                object obj = ResourceManager.GetObject("_200px_Arcane_Shot_167_", resourceCulture);
+                object obj = ResourceManager.GetObject("Arcane_Shot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Bloodfen_Raptor_576_ {
+        public static System.Drawing.Bitmap Bloodfen_Raptor {
             get {
-                object obj = ResourceManager.GetObject("_200px_Bloodfen_Raptor_576_", resourceCulture);
+                object obj = ResourceManager.GetObject("Bloodfen_Raptor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Boulderfist_Ogre_60_ {
+        public static System.Drawing.Bitmap Boulderfist_Ogre {
             get {
-                object obj = ResourceManager.GetObject("_200px_Boulderfist_Ogre_60_", resourceCulture);
+                object obj = ResourceManager.GetObject("Boulderfist_Ogre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Fireball_522_ {
+        public static System.Drawing.Bitmap Fireball {
             get {
-                object obj = ResourceManager.GetObject("_200px_Fireball_522_", resourceCulture);
+                object obj = ResourceManager.GetObject("Fireball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Murloc_Raider_55_ {
+        public static System.Drawing.Bitmap Murloc_Raider {
             get {
-                object obj = ResourceManager.GetObject("_200px_Murloc_Raider_55_", resourceCulture);
+                object obj = ResourceManager.GetObject("Murloc_Raider", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Nightblade_184_ {
+        public static System.Drawing.Bitmap Nightblade {
             get {
-                object obj = ResourceManager.GetObject("_200px_Nightblade_184_", resourceCulture);
+                object obj = ResourceManager.GetObject("Nightblade", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Novice_Engineer_435_ {
+        public static System.Drawing.Bitmap Novice_Engineer {
             get {
-                object obj = ResourceManager.GetObject("_200px_Novice_Engineer_435_", resourceCulture);
+                object obj = ResourceManager.GetObject("Novice_Engineer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Oasis_Snapjaw_15_ {
+        public static System.Drawing.Bitmap Oasis_Snapjaw {
             get {
-                object obj = ResourceManager.GetObject("_200px_Oasis_Snapjaw_15_", resourceCulture);
+                object obj = ResourceManager.GetObject("Oasis_Snapjaw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Polymorph_595_ {
+        public static System.Drawing.Bitmap Polymorph {
             get {
-                object obj = ResourceManager.GetObject("_200px_Polymorph_595_", resourceCulture);
+                object obj = ResourceManager.GetObject("Polymorph", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_River_Crocolisk_535_ {
+        public static System.Drawing.Bitmap River_Crocolisk {
             get {
-                object obj = ResourceManager.GetObject("_200px_River_Crocolisk_535_", resourceCulture);
+                object obj = ResourceManager.GetObject("River_Crocolisk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Sen_jin_Shieldmasta_326_ {
+        public static System.Drawing.Bitmap Sen_jin_Shieldmasta {
             get {
-                object obj = ResourceManager.GetObject("_200px_Sen_jin_Shieldmasta_326_", resourceCulture);
+                object obj = ResourceManager.GetObject("Sen_jin_Shieldmasta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _200px_Wolfrider_174_ {
+        public static System.Drawing.Bitmap Wolfrider {
             get {
-                object obj = ResourceManager.GetObject("_200px_Wolfrider_174_", resourceCulture);
+                object obj = ResourceManager.GetObject("Wolfrider", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

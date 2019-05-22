@@ -118,49 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="_200px_Arcane_Explosion_56_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Arcane_Explosion(56).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arcane_Explosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\arcane_explosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Arcane_Intellect_489_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Arcane_Intellect(489).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arcane_Intellect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\arcane_intellect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Arcane_Missiles_589_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Arcane_Missiles(589).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arcane_Missiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\arcane_missiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Arcane_Shot_167_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Arcane_Shot(167).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arcane_Shot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\arcane_shot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Bloodfen_Raptor_576_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Bloodfen_Raptor(576).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bloodfen_Raptor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\bloodfen_raptor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Boulderfist_Ogre_60_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Boulderfist_Ogre(60).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Boulderfist_Ogre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\boulderfist_ogre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Fireball_522_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Fireball(522).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fireball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\fireball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Murloc_Raider_55_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Murloc_Raider(55).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Murloc_Raider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\murloc_raider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Nightblade_184_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Nightblade(184).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Nightblade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nightblade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Novice_Engineer_435_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Novice_Engineer(435).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Novice_Engineer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\novice_engineer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Oasis_Snapjaw_15_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Oasis_Snapjaw(15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Oasis_Snapjaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oasis_snapjaw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Polymorph_595_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Polymorph(595).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Polymorph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\polymorph.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_River_Crocolisk_535_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-River_Crocolisk(535).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="River_Crocolisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\river_crocolisk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Sen_jin_Shieldmasta_326_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Sen'jin_Shieldmasta(326).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sen_jin_Shieldmasta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sen'jin_shieldmasta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_200px_Wolfrider_174_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\200px-Wolfrider(174).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wolfrider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\wolfrider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

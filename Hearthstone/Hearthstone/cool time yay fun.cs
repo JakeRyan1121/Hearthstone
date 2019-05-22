@@ -20,6 +20,9 @@ namespace Hearthstone
         Card[] arrayP1Deck = new Card[30];//an array holding the player 1 deck
         Card[] arrayP2Deck = new Card[30];//an array holding player 2 deck
 
+        Card[] arrayP1Field = new Card[7];
+        Card[] arrayP2Field = new Card[7];
+
         Random randomCard = new Random();
 
         List<Card> lstPlayer1 = new List<Card>();
@@ -32,7 +35,7 @@ namespace Hearthstone
         int intHealth2 = 30;
         int intMana1 = 0;
         int intMana2 = 0;
-        
+
         int intEndOfList = 0;
 
         int intCountHand = 0;
@@ -47,6 +50,7 @@ namespace Hearthstone
         int intManaCostHolder = 0;
         int intHealthHolder = 0;
         string strNameHolder = "";
+        Image imgHolder = Properties.Resources.Polymorph;
 
         public Form1()
         {
@@ -59,7 +63,13 @@ namespace Hearthstone
             {
                 arrayAllCards[i] = new Card();
                 arrayP1Deck[i] = new Card();
-                arrayP2Deck[i] = new Card();
+                arrayP2Deck[i] = new Card();              
+            }
+
+            for (int i = 0; i < 7; i++)//loop to instanceiate the array of all spells
+            {
+                arrayP1Field[i] = new Card();
+                arrayP2Field[i] = new Card();
             }
 
             arrayAllCards[0].Name = "Bloodfen Raptor";
@@ -186,10 +196,36 @@ namespace Hearthstone
             arrayAllCards[28].ManaCost = 4;
             arrayAllCards[29].ManaCost = 4;
 
-            arrayAllCards[0].Effect = 0;
-
-           //arrayAllCards[1].Picture = 
-           //lstPlayer1.AddRange(arrayAllCards);
+            arrayAllCards[0].Picture = Properties.Resources.Bloodfen_Raptor;
+            arrayAllCards[1].Picture = Properties.Resources.Boulderfist_Ogre;
+            arrayAllCards[2].Picture = Properties.Resources.Murloc_Raider;
+            arrayAllCards[3].Picture = Properties.Resources.Nightblade;
+            arrayAllCards[4].Picture = Properties.Resources.Novice_Engineer;
+            arrayAllCards[5].Picture = Properties.Resources.Oasis_Snapjaw;
+            arrayAllCards[6].Picture = Properties.Resources.River_Crocolisk;
+            arrayAllCards[7].Picture = Properties.Resources.Sen_jin_Shieldmasta;
+            arrayAllCards[8].Picture = Properties.Resources.Wolfrider;
+            arrayAllCards[9].Picture = Properties.Resources.Arcane_Explosion;
+            arrayAllCards[10].Picture = Properties.Resources.Arcane_Intellect;
+            arrayAllCards[11].Picture = Properties.Resources.Arcane_Missiles;
+            arrayAllCards[12].Picture = Properties.Resources.Arcane_Shot;
+            arrayAllCards[13].Picture = Properties.Resources.Fireball;
+            arrayAllCards[14].Picture = Properties.Resources.Polymorph;
+            arrayAllCards[15].Picture = Properties.Resources.Bloodfen_Raptor;
+            arrayAllCards[16].Picture = Properties.Resources.Boulderfist_Ogre;
+            arrayAllCards[17].Picture = Properties.Resources.Murloc_Raider;
+            arrayAllCards[18].Picture = Properties.Resources.Nightblade;
+            arrayAllCards[19].Picture = Properties.Resources.Novice_Engineer;
+            arrayAllCards[20].Picture = Properties.Resources.Oasis_Snapjaw;
+            arrayAllCards[21].Picture = Properties.Resources.River_Crocolisk;
+            arrayAllCards[22].Picture = Properties.Resources.Sen_jin_Shieldmasta;
+            arrayAllCards[23].Picture = Properties.Resources.Wolfrider;
+            arrayAllCards[24].Picture = Properties.Resources.Arcane_Explosion;
+            arrayAllCards[25].Picture = Properties.Resources.Arcane_Intellect;
+            arrayAllCards[26].Picture = Properties.Resources.Arcane_Missiles;
+            arrayAllCards[27].Picture = Properties.Resources.Arcane_Shot;
+            arrayAllCards[28].Picture = Properties.Resources.Fireball;
+            arrayAllCards[29].Picture = Properties.Resources.Polymorph;
             
         }
         public void DeckShuffle()
@@ -205,6 +241,7 @@ namespace Hearthstone
                 intManaCostHolder = arrayAllCards[int1stHalf].ManaCost;
                 intHealthHolder = arrayAllCards[int1stHalf].Health;
                 strNameHolder = arrayAllCards[int1stHalf].Name;
+                imgHolder = arrayAllCards[int1stHalf].Picture;
                 //test message
 
                 //STEP 3: REPLACING 1ST HALF WITH 2ND HALF
@@ -212,21 +249,23 @@ namespace Hearthstone
                 arrayAllCards[int1stHalf].ManaCost = arrayAllCards[int2ndHalf].ManaCost;
                 arrayAllCards[int1stHalf].Health = arrayAllCards[int2ndHalf].Health;
                 arrayAllCards[int1stHalf].Name = arrayAllCards[int2ndHalf].Name;
+                arrayAllCards[int1stHalf].Picture = arrayAllCards[int2ndHalf].Picture;
 
                 //STEP 4: FILLING IN THE 2ND HALF WITH THE SAVED VALUES
                 arrayAllCards[int2ndHalf].Attack = intAttackHolder;
                 arrayAllCards[int2ndHalf].ManaCost = intManaCostHolder;
                 arrayAllCards[int2ndHalf].Health = intHealthHolder;
                 arrayAllCards[int2ndHalf].Name = strNameHolder;
+                arrayAllCards[int2ndHalf].Picture = imgHolder;
+
                 //test message after switch
-                //MessageBox.Show(arrayCards[int1stHalf].Value + " " + arrayCards[int1stHalf].Suit + "\n" + arrayCards[int2ndHalf].Value + " " + arrayCards[int2ndHalf].Suit + "\n" + intValueHolder + " " + strSuitHolder);
 
                 intCounter++;//add to counter
             }
             intCounter = 0;
-            
+
         }
-        
+
         public void Player1List()
         {
             DeckShuffle();
@@ -237,7 +276,7 @@ namespace Hearthstone
                 arrayP1Deck[i].Attack = arrayAllCards[i].Attack;
                 arrayP1Deck[i].Health = arrayAllCards[i].Health;
                 arrayP1Deck[i].ManaCost = arrayAllCards[i].ManaCost;
-                arrayP1Deck[i].Effect = arrayAllCards[i].Effect;
+                arrayP1Deck[i].Picture = arrayAllCards[i].Picture;
             }
 
             lstPlayer1.AddRange(arrayP1Deck);
@@ -258,7 +297,7 @@ namespace Hearthstone
                 arrayP2Deck[i].Attack = arrayAllCards[i].Attack;
                 arrayP2Deck[i].Health = arrayAllCards[i].Health;
                 arrayP2Deck[i].ManaCost = arrayAllCards[i].ManaCost;
-                arrayP2Deck[i].Effect = arrayAllCards[i].Effect;
+                arrayP2Deck[i].Picture = arrayAllCards[i].Picture;
             }
 
             lstPlayer2.AddRange(arrayP2Deck);
@@ -272,9 +311,9 @@ namespace Hearthstone
         public void DrawCardP1()
         {
             intEndOfList = lstPlayer1.Count - 1;
-            
+
             lstP1Hand.Add(lstPlayer1[intEndOfList]);
-            
+
             lstPlayer1.RemoveAt(intEndOfList);
 
             lstVisualHand.Items.Add(lstP1Hand[intCountHand].Name);
@@ -290,7 +329,7 @@ namespace Hearthstone
             lstP2Hand.Add(lstPlayer2[intEndOfList]);
 
             lstPlayer2.RemoveAt(intEndOfList);
-            
+
             intCountHand++;
 
         }
@@ -298,7 +337,7 @@ namespace Hearthstone
         public void Mana()
         {
             intCountTurn++;
-            
+
             if (intCountTurn <= 10)
             {
                 intMana1 = intCountTurn;
@@ -316,14 +355,15 @@ namespace Hearthstone
 
         public void Effects()
         {
-            if (lstP1Hand[0].Effect == 1)
+            for (int E = 0; E < lstVisualHand.Items.Count; E++)
             {
-                DrawCardP1();
-            }
-            else if (lstP1Hand[0].Effect == 2)
-            {
+                if (lstP1Hand[lstVisualHand.SelectedIndex].Name == "Wolfrider")
+                {
+                    lstP1Hand[E].Charge();
+                }
                 
             }
+
         }
 
         public void Health()
@@ -345,51 +385,7 @@ namespace Hearthstone
         {
             Mana();
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lstVisualHand_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 
     public class Card
@@ -398,12 +394,15 @@ namespace Hearthstone
         public int Attack { get; set; }
         public int Health { get; set; }
         public int ManaCost { get; set; }
-        public int Effect { get; set; } //fix this
-        public PictureBox Picture { get; set; }
+        //public int Effect { get; set; } //fix this
+        public Image Picture { get; set; }
 
-
+        public void Charge()
+        {
+            MessageBox.Show("testy testhole");
+        }
     }
 }
 
-    
+
 

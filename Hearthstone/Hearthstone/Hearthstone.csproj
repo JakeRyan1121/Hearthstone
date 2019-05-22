@@ -80,49 +80,49 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Arcane_Explosion%2856%29.png" />
+    <None Include="Resources\Arcane_Explosion.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Arcane_Intellect%28489%29.png" />
+    <None Include="Resources\Arcane_Intellect.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Arcane_Missiles%28589%29.png" />
+    <None Include="Resources\Arcane_Missiles.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Arcane_Shot%28167%29.png" />
+    <None Include="Resources\Arcane_Shot.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Bloodfen_Raptor%28576%29.png" />
+    <None Include="Resources\Bloodfen_Raptor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Boulderfist_Ogre%2860%29.png" />
+    <None Include="Resources\Boulderfist_Ogre.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Fireball%28522%29.png" />
+    <None Include="Resources\Fireball.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Murloc_Raider%2855%29.png" />
+    <None Include="Resources\Murloc_Raider.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Nightblade%28184%29.png" />
+    <None Include="Resources\Nightblade.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Novice_Engineer%28435%29.png" />
+    <None Include="Resources\Novice_Engineer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Oasis_Snapjaw%2815%29.png" />
+    <None Include="Resources\Oasis_Snapjaw.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Polymorph%28595%29.png" />
+    <None Include="Resources\Polymorph.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-River_Crocolisk%28535%29.png" />
+    <None Include="Resources\River_Crocolisk.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Sen%27jin_Shieldmasta%28326%29.png" />
+    <None Include="Resources\Sen%27jin_Shieldmasta.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\200px-Wolfrider%28174%29.png" />
+    <None Include="Resources\Wolfrider.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
