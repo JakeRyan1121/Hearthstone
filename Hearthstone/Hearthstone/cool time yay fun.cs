@@ -16,6 +16,7 @@ namespace Hearthstone
 {
     public partial class Form1 : Form
     {
+        
         Card[] arrayAllCards = new Card[30];//an array holding all the spells
         Card[] arrayP1Deck = new Card[30];//an array holding the player 1 deck
         Card[] arrayP2Deck = new Card[30];//an array holding player 2 deck
@@ -35,6 +36,10 @@ namespace Hearthstone
         int intHealth2 = 30;
         int intMana1 = 0;
         int intMana2 = 0;
+
+        bool blnEnough;
+
+        int intSelectedCard = 0;
 
         int intEndOfList = 0;
 
@@ -374,7 +379,22 @@ namespace Hearthstone
 
         public void HandToField()
         {
-            pictureBox1.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+            if (lstP1Hand[lstVisualHand.SelectedIndex].ManaCost <= intMana1)
+            {
+                intMana1 = intMana1 - lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
+                lblMana1.Text = Convert.ToString(intMana1);
+
+                arrayP1Field[intSelectedCard].Name = lstP1Hand[lstVisualHand.SelectedIndex].Name;
+                arrayP1Field[intSelectedCard].Attack = lstP1Hand[lstVisualHand.SelectedIndex].Attack;
+                arrayP1Field[intSelectedCard].Health = lstP1Hand[lstVisualHand.SelectedIndex].Health;
+                arrayP1Field[intSelectedCard].ManaCost = lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
+                intCountHand--;
+                blnEnough = true;
+            }
+            else
+            {
+                blnEnough = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -389,11 +409,127 @@ namespace Hearthstone
         private void btnEnd_Click(object sender, EventArgs e)
         {
             Mana();
+            DrawCardP1();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 0;
             HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox8.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 1;
+            HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox9.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 2;
+            HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox10.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+            }
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 3;
+            HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox11.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+            }
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 4;
+            HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox12.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+            }
+        }
+        
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 5;
+            HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox13.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+            }
+        }
+        
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 6;
+            HandToField();
+            if (blnEnough == true)
+            {
+                pictureBox14.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+            }
         }
     }
 
