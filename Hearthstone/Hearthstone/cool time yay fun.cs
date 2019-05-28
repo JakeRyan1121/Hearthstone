@@ -420,6 +420,26 @@ namespace Hearthstone
             lstVisualHand.SelectedIndex = 0;
         }
 
+        public void UserHeroAbility()
+        {
+            if (intMana1 >= 2)
+            {
+                intMana1 -= 2;
+                intHealth2 -= 2;
+
+            }
+        }
+
+        public void BotUserAbility()
+        {
+            if (intMana2 >= 2)
+            {
+                intMana2 -= 2;
+                intHealth1 -= 2;
+
+            }
+        }
+
         private void btnEnd_Click(object sender, EventArgs e)
         {
             Mana();
