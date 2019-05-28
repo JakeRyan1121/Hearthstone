@@ -379,23 +379,34 @@ namespace Hearthstone
 
         public void HandToField()
         {
-            
-            if (lstP1Hand[lstVisualHand.SelectedIndex].ManaCost <= intMana1)
+            try
             {
-                intMana1 = intMana1 - lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
-                lblMana1.Text = Convert.ToString(intMana1);
 
-                arrayP1Field[intSelectedCard].Name = lstP1Hand[lstVisualHand.SelectedIndex].Name;
-                arrayP1Field[intSelectedCard].Attack = lstP1Hand[lstVisualHand.SelectedIndex].Attack;
-                arrayP1Field[intSelectedCard].Health = lstP1Hand[lstVisualHand.SelectedIndex].Health;
-                arrayP1Field[intSelectedCard].ManaCost = lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
-                intCountHand--;
-                blnEnough = true;
+
+
+                if (lstP1Hand[lstVisualHand.SelectedIndex].ManaCost <= intMana1)
+                {
+                    intMana1 = intMana1 - lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
+                    lblMana1.Text = Convert.ToString(intMana1);
+
+                    arrayP1Field[intSelectedCard].Name = lstP1Hand[lstVisualHand.SelectedIndex].Name;
+                    arrayP1Field[intSelectedCard].Attack = lstP1Hand[lstVisualHand.SelectedIndex].Attack;
+                    arrayP1Field[intSelectedCard].Health = lstP1Hand[lstVisualHand.SelectedIndex].Health;
+                    arrayP1Field[intSelectedCard].ManaCost = lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
+                    intCountHand--;
+                    blnEnough = true;
+                }
+                else
+                {
+                    blnEnough = false;
+                }
             }
-            else
+            catch
             {
-                blnEnough = false;
+
             }
+          
+            
         }
 
         public void EnoughCards()
@@ -486,12 +497,21 @@ namespace Hearthstone
             
             intSelectedCard = 0;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox8.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);               
+
+
+                if (blnEnough == true && lstVisualHand.Items.Count >= 1)
+                {
+                    pictureBox8.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                }
                 lstVisualHand.SelectedIndex = 0;
+            }
+            catch
+            {
+
             }
             
         }
