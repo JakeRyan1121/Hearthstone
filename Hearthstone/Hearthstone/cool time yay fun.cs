@@ -379,6 +379,7 @@ namespace Hearthstone
 
         public void HandToField()
         {
+            
             if (lstP1Hand[lstVisualHand.SelectedIndex].ManaCost <= intMana1)
             {
                 intMana1 = intMana1 - lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
@@ -397,6 +398,18 @@ namespace Hearthstone
             }
         }
 
+        public void EnoughCards()
+        {
+            if (lstVisualHand.SelectedIndex <= -1)
+            {
+                pictureBox8.Enabled = false;
+            }
+            else 
+            {
+                pictureBox8.Enabled = true;
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             StartUp();
@@ -404,12 +417,13 @@ namespace Hearthstone
             Player2List();
             Mana();
             Health();
+            lstVisualHand.SelectedIndex = 0;
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
             Mana();
-            DrawCardP1();
+            //DrawCardP1();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -449,15 +463,17 @@ namespace Hearthstone
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
+            
             intSelectedCard = 0;
             HandToField();
             if (blnEnough == true)
             {
                 pictureBox8.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                
+                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);               
+                lstVisualHand.SelectedIndex = 0;
             }
+            
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -469,6 +485,7 @@ namespace Hearthstone
                 pictureBox9.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
                 lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                lstVisualHand.SelectedIndex = 0;
             }
         }
 
@@ -481,6 +498,7 @@ namespace Hearthstone
                 pictureBox10.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
                 lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                lstVisualHand.SelectedIndex = 0;
             }
         }
 
@@ -493,6 +511,7 @@ namespace Hearthstone
                 pictureBox11.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
                 lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                lstVisualHand.SelectedIndex = 0;
             }
         }
 
@@ -505,6 +524,7 @@ namespace Hearthstone
                 pictureBox12.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
                 lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                lstVisualHand.SelectedIndex = 0;
             }
         }
         
@@ -517,6 +537,7 @@ namespace Hearthstone
                 pictureBox13.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
                 lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                lstVisualHand.SelectedIndex = 0;
             }
         }
         
@@ -529,6 +550,7 @@ namespace Hearthstone
                 pictureBox14.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                 lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
                 lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                lstVisualHand.SelectedIndex = 0;
             }
         }
     }
