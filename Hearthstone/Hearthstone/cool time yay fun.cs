@@ -43,7 +43,8 @@ namespace Hearthstone
 
         int intEndOfList = 0;
 
-        int intCountHand = 0;
+        int intCountHand1 = 0;
+        int intCountHand2 = 0;
 
         int intCountTurn = 0;
 
@@ -320,11 +321,10 @@ namespace Hearthstone
             lstP1Hand.Add(lstPlayer1[intEndOfList]);
 
             lstPlayer1.RemoveAt(intEndOfList);
+            
+            lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name);
 
-            lstVisualHand.Items.Add(lstP1Hand[intCountHand].Name);
-
-            intCountHand++;
-
+            intCountHand1++;
         }
 
         public void DrawCardP2()
@@ -335,7 +335,7 @@ namespace Hearthstone
 
             lstPlayer2.RemoveAt(intEndOfList);
 
-            intCountHand++;
+            intCountHand2++;
 
         }
 
@@ -381,9 +381,6 @@ namespace Hearthstone
         {
             try
             {
-
-
-
                 if (lstP1Hand[lstVisualHand.SelectedIndex].ManaCost <= intMana1)
                 {
                     intMana1 = intMana1 - lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
@@ -393,7 +390,7 @@ namespace Hearthstone
                     arrayP1Field[intSelectedCard].Attack = lstP1Hand[lstVisualHand.SelectedIndex].Attack;
                     arrayP1Field[intSelectedCard].Health = lstP1Hand[lstVisualHand.SelectedIndex].Health;
                     arrayP1Field[intSelectedCard].ManaCost = lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
-                    intCountHand--;
+                    intCountHand1--;
                     blnEnough = true;
                 }
                 else
@@ -403,10 +400,9 @@ namespace Hearthstone
             }
             catch
             {
-
+                MessageBox.Show("Your hand is empty");
             }
           
-            
         }
 
         public void EnoughCards()
@@ -441,7 +437,7 @@ namespace Hearthstone
             }
         }
 
-        public void BotUserAbility()
+        public void BotHeroAbility()
         {
             if (intMana2 >= 2)
             {
@@ -454,7 +450,7 @@ namespace Hearthstone
         private void btnEnd_Click(object sender, EventArgs e)
         {
             Mana();
-            //DrawCardP1();
+            DrawCardP1();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -499,9 +495,7 @@ namespace Hearthstone
             HandToField();
             try
             {
-
-
-                if (blnEnough == true && lstVisualHand.Items.Count >= 1)
+                if (blnEnough == true)
                 {
                     pictureBox8.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -511,7 +505,7 @@ namespace Hearthstone
             }
             catch
             {
-
+             
             }
             
         }
@@ -520,12 +514,19 @@ namespace Hearthstone
         {
             intSelectedCard = 1;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox9.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                lstVisualHand.SelectedIndex = 0;
+                if (blnEnough == true)
+                {
+                    pictureBox9.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                    lstVisualHand.SelectedIndex = 0;
+                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -533,12 +534,19 @@ namespace Hearthstone
         {
             intSelectedCard = 2;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox10.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                lstVisualHand.SelectedIndex = 0;
+                if (blnEnough == true)
+                {
+                    pictureBox10.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                    lstVisualHand.SelectedIndex = 0;
+                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -546,12 +554,19 @@ namespace Hearthstone
         {
             intSelectedCard = 3;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox11.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                lstVisualHand.SelectedIndex = 0;
+                if (blnEnough == true)
+                {
+                    pictureBox11.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                    lstVisualHand.SelectedIndex = 0;
+                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -559,12 +574,19 @@ namespace Hearthstone
         {
             intSelectedCard = 4;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox12.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                lstVisualHand.SelectedIndex = 0;
+                if (blnEnough == true)
+                {
+                    pictureBox12.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                    lstVisualHand.SelectedIndex = 0;
+                }
+            }
+            catch
+            {
+
             }
         }
         
@@ -572,12 +594,19 @@ namespace Hearthstone
         {
             intSelectedCard = 5;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox13.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                lstVisualHand.SelectedIndex = 0;
+                if (blnEnough == true)
+                {
+                    pictureBox13.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                    lstVisualHand.SelectedIndex = 0;
+                }
+            }
+            catch
+            {
+
             }
         }
         
@@ -585,12 +614,19 @@ namespace Hearthstone
         {
             intSelectedCard = 6;
             HandToField();
-            if (blnEnough == true)
+            try
             {
-                pictureBox14.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
-                lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
-                lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
-                lstVisualHand.SelectedIndex = 0;
+                if (blnEnough == true)
+                {
+                    pictureBox14.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
+                    lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
+                    lstVisualHand.Items.Remove(lstVisualHand.SelectedItem);
+                    lstVisualHand.SelectedIndex = 0;
+                }
+            }
+            catch
+            {
+
             }
         }
     }
