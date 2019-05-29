@@ -52,6 +52,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lstVisualHand2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -315,11 +316,20 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lstVisualHand2
+            // 
+            this.lstVisualHand2.FormattingEnabled = true;
+            this.lstVisualHand2.Location = new System.Drawing.Point(9, 29);
+            this.lstVisualHand2.Name = "lstVisualHand2";
+            this.lstVisualHand2.Size = new System.Drawing.Size(138, 277);
+            this.lstVisualHand2.TabIndex = 29;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 790);
+            this.Controls.Add(this.lstVisualHand2);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -393,6 +403,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.ListBox lstVisualHand2;
     }
 }
 

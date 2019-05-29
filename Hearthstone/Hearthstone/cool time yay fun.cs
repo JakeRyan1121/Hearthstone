@@ -37,7 +37,8 @@ namespace Hearthstone
         int intMana1 = 0;
         int intMana2 = 0;
 
-        bool blnEnough;
+        bool blnEnough1;
+        bool blnEnough2;
 
         int intSelectedCard = 0;
         int intSelectedBot = 0;
@@ -323,7 +324,7 @@ namespace Hearthstone
 
             lstPlayer1.RemoveAt(intEndOfList);
             
-            lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name + "       " + lstPlayer1[intCountHand1].ManaCost);
+            lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name + "      " + lstP1Hand[intCountHand1].ManaCost);
 
             intCountHand1++;
         }
@@ -335,6 +336,8 @@ namespace Hearthstone
             lstP2Hand.Add(lstPlayer2[intEndOfList]);
 
             lstPlayer2.RemoveAt(intEndOfList);
+
+            lstVisualHand2.Items.Add(lstP2Hand[intCountHand2].Name + "      " + lstP2Hand[intCountHand2].ManaCost);
 
             intCountHand2++;
 
@@ -378,7 +381,7 @@ namespace Hearthstone
             lblHealth2.Text = Convert.ToString(intHealth2);
         }
 
-        public void HandToField()
+        public void HandToField1()
         {
             try
             {
@@ -392,11 +395,11 @@ namespace Hearthstone
                     arrayP1Field[intSelectedCard].Health = lstP1Hand[lstVisualHand.SelectedIndex].Health;
                     arrayP1Field[intSelectedCard].ManaCost = lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
                     intCountHand1--;
-                    blnEnough = true;
+                    blnEnough1 = true;
                 }
                 else
                 {
-                    blnEnough = false;
+                    blnEnough1 = false;
                 }
             }
             catch
@@ -404,6 +407,33 @@ namespace Hearthstone
                 MessageBox.Show("Your hand is empty");
             }
           
+        }
+
+        public void HandToField2()
+        {
+            try
+            {
+                if (lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost <= intMana2)
+                {
+                    intMana2 = intMana2 - lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost;
+                    lblMana2.Text = Convert.ToString(intMana2);
+
+                    arrayP2Field[intSelectedBot].Name = lstP2Hand[lstVisualHand2.SelectedIndex].Name;
+                    arrayP2Field[intSelectedBot].Attack = lstP2Hand[lstVisualHand2.SelectedIndex].Attack;
+                    arrayP2Field[intSelectedBot].Health = lstP2Hand[lstVisualHand2.SelectedIndex].Health;
+                    arrayP2Field[intSelectedBot].ManaCost = lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost;
+                    intCountHand2--;
+                    blnEnough2 = true;
+                }
+                else
+                {
+                    blnEnough2 = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Your hand is empty");
+            }
         }
 
         public void Damage()
@@ -524,54 +554,61 @@ namespace Hearthstone
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             intSelectedBot = 0;
-            RemoveFromField();
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox1.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             intSelectedBot = 1;
-            RemoveFromField();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             intSelectedBot = 2;
-            RemoveFromField();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             intSelectedBot = 3;
-            RemoveFromField();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             intSelectedBot = 4;
-            RemoveFromField();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             intSelectedBot = 5;
-            RemoveFromField();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             intSelectedBot = 6;
-            RemoveFromField();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             
             intSelectedCard = 0;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox8.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -589,11 +626,10 @@ namespace Hearthstone
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             intSelectedCard = 1;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox9.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -610,11 +646,10 @@ namespace Hearthstone
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             intSelectedCard = 2;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox10.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -631,11 +666,10 @@ namespace Hearthstone
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             intSelectedCard = 3;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox11.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -652,11 +686,10 @@ namespace Hearthstone
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             intSelectedCard = 4;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox12.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -673,11 +706,10 @@ namespace Hearthstone
         private void pictureBox13_Click(object sender, EventArgs e)
         {
             intSelectedCard = 5;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox13.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
@@ -694,11 +726,10 @@ namespace Hearthstone
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             intSelectedCard = 6;
-            RemoveFromField();
-            HandToField();
+            HandToField1();
             try
             {
-                if (blnEnough == true)
+                if (blnEnough1 == true)
                 {
                     pictureBox14.Image = lstP1Hand[lstVisualHand.SelectedIndex].Picture;
                     lstP1Hand.RemoveAt(lstVisualHand.SelectedIndex);
