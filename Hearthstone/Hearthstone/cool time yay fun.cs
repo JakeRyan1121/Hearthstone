@@ -40,6 +40,7 @@ namespace Hearthstone
         bool blnEnough;
 
         int intSelectedCard = 0;
+        int intSelectedBot = 0;
 
         int intEndOfList = 0;
 
@@ -405,6 +406,73 @@ namespace Hearthstone
           
         }
 
+        public void Damage()
+        {
+            arrayP1Field[intSelectedCard].Health -= arrayP2Field[intSelectedBot].Attack;
+            arrayP2Field[intSelectedBot].Health -= arrayP1Field[intSelectedCard].Attack;
+        }
+
+        public void RemoveFromField()
+        {
+            if (arrayP1Field[0].Health <= 0)
+            {
+                pictureBox8.Image = null;
+            }
+            else if (arrayP1Field[1].Health <= 0)
+            {
+                pictureBox9.Image = null;
+            }
+            else if (arrayP1Field[2].Health <= 0)
+            {
+                pictureBox10.Image = null;
+            }
+            else if (arrayP1Field[3].Health <= 0)
+            {
+                pictureBox11.Image = null;
+            }
+            else if (arrayP1Field[4].Health <= 0)
+            {
+                pictureBox12.Image = null;
+            }
+            else if (arrayP1Field[5].Health <= 0)
+            {
+                pictureBox13.Image = null;
+            }
+            else if (arrayP1Field[6].Health <= 0)
+            {
+                pictureBox14.Image = null;
+            }
+            
+            if (arrayP2Field[0].Health <= 0)
+            {
+                pictureBox1.Image = null;
+            }
+            else if (arrayP2Field[1].Health <= 0)
+            {
+                pictureBox2.Image = null;
+            }
+            else if (arrayP2Field[2].Health <= 0)
+            {
+                pictureBox3.Image = null;
+            }
+            else if (arrayP2Field[3].Health <= 0)
+            {
+                pictureBox4.Image = null;
+            }
+            else if (arrayP2Field[4].Health <= 0)
+            {
+                pictureBox5.Image = null;
+            }
+            else if (arrayP2Field[5].Health <= 0)
+            {
+                pictureBox6.Image = null;
+            }
+            else if (arrayP2Field[6].Health <= 0)
+            {
+                pictureBox7.Image = null;
+            }
+        }
+
         public void EnoughCards()
         {
             if (lstVisualHand.SelectedIndex <= -1)
@@ -455,43 +523,51 @@ namespace Hearthstone
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            intSelectedBot = 0;
+            RemoveFromField();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            intSelectedBot = 1;
+            RemoveFromField();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            intSelectedBot = 2;
+            RemoveFromField();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            intSelectedBot = 3;
+            RemoveFromField();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            intSelectedBot = 4;
+            RemoveFromField();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-
+            intSelectedBot = 5;
+            RemoveFromField();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
+            intSelectedBot = 6;
+            RemoveFromField();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             
             intSelectedCard = 0;
+            RemoveFromField();
             HandToField();
             try
             {
@@ -513,6 +589,7 @@ namespace Hearthstone
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             intSelectedCard = 1;
+            RemoveFromField();
             HandToField();
             try
             {
@@ -533,6 +610,7 @@ namespace Hearthstone
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             intSelectedCard = 2;
+            RemoveFromField();
             HandToField();
             try
             {
@@ -553,6 +631,7 @@ namespace Hearthstone
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             intSelectedCard = 3;
+            RemoveFromField();
             HandToField();
             try
             {
@@ -573,6 +652,7 @@ namespace Hearthstone
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             intSelectedCard = 4;
+            RemoveFromField();
             HandToField();
             try
             {
@@ -593,6 +673,7 @@ namespace Hearthstone
         private void pictureBox13_Click(object sender, EventArgs e)
         {
             intSelectedCard = 5;
+            RemoveFromField();
             HandToField();
             try
             {
@@ -613,6 +694,7 @@ namespace Hearthstone
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             intSelectedCard = 6;
+            RemoveFromField();
             HandToField();
             try
             {
