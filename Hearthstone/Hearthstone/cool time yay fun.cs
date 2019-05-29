@@ -322,7 +322,7 @@ namespace Hearthstone
 
             lstPlayer1.RemoveAt(intEndOfList);
             
-            lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name);
+            lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name + "       " + lstPlayer1[intCountHand1].ManaCost);
 
             intCountHand1++;
         }

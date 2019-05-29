@@ -124,5 +124,17 @@
   <ItemGroup>
     <None Include="Resources\Wolfrider.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rexxar%28484%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1608-1190021459-standard-1531234198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abominable-bowman-1-300x429 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49895.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

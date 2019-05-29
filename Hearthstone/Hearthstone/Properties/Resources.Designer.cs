@@ -63,39 +63,39 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _1608_1190021459_standard_1531234198 {
+            get {
+                object obj = ResourceManager.GetObject("_1608_1190021459_standard_1531234198", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _49895 {
+            get {
+                object obj = ResourceManager.GetObject("_49895", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap abominable_bowman_1_300x429__1_ {
+            get {
+                object obj = ResourceManager.GetObject("abominable_bowman_1_300x429__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Arcane_Explosion {
             get {
                 object obj = ResourceManager.GetObject("Arcane_Explosion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Arcane_Intellect {
-            get {
-                object obj = ResourceManager.GetObject("Arcane_Intellect", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Arcane_Missiles {
-            get {
-                object obj = ResourceManager.GetObject("Arcane_Missiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Arcane_Shot {
-            get {
-                object obj = ResourceManager.GetObject("Arcane_Shot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,16 +116,6 @@ namespace Hearthstone.Properties {
         public static System.Drawing.Bitmap Boulderfist_Ogre {
             get {
                 object obj = ResourceManager.GetObject("Boulderfist_Ogre", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Fireball {
-            get {
-                object obj = ResourceManager.GetObject("Fireball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +163,9 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Polymorph {
+        public static System.Drawing.Bitmap Rexxar_484_ {
             get {
-                object obj = ResourceManager.GetObject("Polymorph", resourceCulture);
+                object obj = ResourceManager.GetObject("Rexxar_484_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
