@@ -128,19 +128,22 @@
     <None Include="Resources\Rexxar%28484%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1608-1190021459-standard-1531234198.png" />
+    <None Include="Resources\Electra_Stormsurge.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\abominable-bowman-1-300x429 %281%29.png" />
+    <None Include="Resources\Abominable-bowman.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\49895.png" />
+    <None Include="Resources\Gearmaster_Mechazod.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\abomination-300x429.png" />
+    <None Include="Resources\Abomination.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\aberrant-berserker-300x429.png" />
+    <None Include="Resources\Aberrant-berserker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pyromaniac.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

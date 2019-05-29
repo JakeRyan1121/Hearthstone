@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="aberrant_berserker_300x429" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aberrant-berserker-300x429.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="abominable_bowman_1_300x429__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\abominable-bowman-1-300x429 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="abomination_300x429" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\abomination-300x429.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Arcane_Explosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\arcane_explosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Bloodfen_Raptor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\bloodfen_raptor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,10 +148,22 @@
   <data name="Wolfrider" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\wolfrider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_1608_1190021459_standard_1531234198" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1608-1190021459-standard-1531234198.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Aberrant_berserker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\aberrant-berserker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_49895" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\49895.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Abominable_bowman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\abominable-bowman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Abomination" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\abomination.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Electra_Stormsurge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electra_stormsurge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gearmaster_Mechazod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\gearmaster_mechazod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pyromaniac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\pyromaniac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
