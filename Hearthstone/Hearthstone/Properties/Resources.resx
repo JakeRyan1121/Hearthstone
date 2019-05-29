@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="aberrant_berserker_300x429" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aberrant-berserker-300x429.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="abominable_bowman_1_300x429__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abominable-bowman-1-300x429 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abomination_300x429" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abomination-300x429.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Arcane_Explosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\arcane_explosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

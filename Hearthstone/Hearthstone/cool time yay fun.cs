@@ -56,7 +56,7 @@ namespace Hearthstone
         int intManaCostHolder = 0;
         int intHealthHolder = 0;
         string strNameHolder = "";
-        Image imgHolder = Properties.Resources.Polymorph;
+        Image imgHolder = null;
 
         public Form1()
         {

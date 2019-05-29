@@ -83,9 +83,29 @@ namespace Hearthstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap aberrant_berserker_300x429 {
+            get {
+                object obj = ResourceManager.GetObject("aberrant_berserker_300x429", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap abominable_bowman_1_300x429__1_ {
             get {
                 object obj = ResourceManager.GetObject("abominable_bowman_1_300x429__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap abomination_300x429 {
+            get {
+                object obj = ResourceManager.GetObject("abomination_300x429", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
