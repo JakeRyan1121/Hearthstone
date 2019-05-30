@@ -523,6 +523,7 @@ namespace Hearthstone
             Mana();
             Health();
             lstVisualHand.SelectedIndex = 0;
+            lstVisualHand2.SelectedIndex = 0;
         }
 
         public void UserHeroAbility()
@@ -549,6 +550,7 @@ namespace Hearthstone
         {
             Mana();
             DrawCardP1();
+            DrawCardP2();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -574,31 +576,121 @@ namespace Hearthstone
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             intSelectedBot = 1;
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox2.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             intSelectedBot = 2;
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox3.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             intSelectedBot = 3;
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox4.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             intSelectedBot = 4;
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox5.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             intSelectedBot = 5;
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox6.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             intSelectedBot = 6;
+            HandToField2();
+            try
+            {
+                if (blnEnough2 == true)
+                {
+                    pictureBox7.Image = lstP2Hand[lstVisualHand2.SelectedIndex].Picture;
+                    lstP2Hand.RemoveAt(lstVisualHand2.SelectedIndex);
+                    lstVisualHand2.Items.Remove(lstVisualHand2.SelectedItem);
+                }
+                lstVisualHand2.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)

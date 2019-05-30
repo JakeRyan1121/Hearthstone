@@ -133,9 +133,6 @@
   <data name="Novice_Engineer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\novice_engineer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Oasis_Snapjaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\oasis_snapjaw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Rexxar_484_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rexxar(484).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,17 +148,20 @@
   <data name="Aberrant_berserker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\aberrant-berserker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Electra_Stormsurge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electra_stormsurge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Abominable_bowman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\abominable-bowman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Abomination" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\abomination.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Electra_Stormsurge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electra_stormsurge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Gearmaster_Mechazod" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\gearmaster_mechazod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oasis_Snapjaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oasis_snapjaw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pyromaniac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\pyromaniac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
