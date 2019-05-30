@@ -39,6 +39,7 @@ namespace Hearthstone
 
         bool blnEnough1;
         bool blnEnough2;
+        bool boolU1Turn = true;
 
         int intSelectedCard = 0;
         int intSelectedBot = 0;
@@ -438,8 +439,11 @@ namespace Hearthstone
 
         public void Damage()
         {
-            arrayP1Field[intSelectedCard].Health -= arrayP2Field[intSelectedBot].Attack;
-            arrayP2Field[intSelectedBot].Health -= arrayP1Field[intSelectedCard].Attack;
+            if (intSelectedCard >= 0 && intSelectedBot >= 0)
+            {
+                arrayP1Field[intSelectedCard].Health -= arrayP2Field[intSelectedBot].Attack;
+                arrayP2Field[intSelectedBot].Health -= arrayP1Field[intSelectedCard].Attack;
+            }
         }
 
         public void RemoveFromField()
@@ -532,7 +536,8 @@ namespace Hearthstone
             {
                 intMana1 -= 2;
                 intHealth2 -= 2;
-
+                lblHealth2.Text = intHealth2.ToString();
+                lblMana1.Text = intMana1.ToString();
             }
         }
 
@@ -542,15 +547,20 @@ namespace Hearthstone
             {
                 intMana2 -= 2;
                 intHealth1 -= 2;
+                lblHealth1.Text = intHealth1.ToString();
+                lblMana2.Text = intMana2.ToString();
 
             }
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
+            boolU1Turn = !boolU1Turn;
             Mana();
             DrawCardP1();
             DrawCardP2();
+            intSelectedBot = -1;
+            intSelectedCard = -1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -696,7 +706,7 @@ namespace Hearthstone
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             
-            intSelectedCard = 0;
+            
             HandToField1();
             try
             {
@@ -834,6 +844,95 @@ namespace Hearthstone
 
             }
         }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            UserHeroAbility();
+        }
+        
+        private void btnAttack1_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 0;
+            Damage();
+        }
+
+        private void btnAttack2_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 1;
+            Damage();
+        }
+
+        private void btnAttack3_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 2;
+            Damage();
+        }
+
+        private void btnAttack4_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 3;
+            Damage();
+        }
+
+        private void btnAttack5_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 4;
+            Damage();
+        }
+
+        private void btnAttack6_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 5;
+            Damage();
+        }
+
+        private void btnAttack7_Click(object sender, EventArgs e)
+        {
+            intSelectedBot = 6;
+            Damage();
+        }
+
+        private void btnAttack8_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 0;
+            Damage();
+        }
+
+        private void btnattack9_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 1;
+            Damage();
+        }
+
+        private void btnAttack10_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 2;
+            Damage();
+        }
+
+        private void btnAttack11_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 3;
+            Damage();
+        }
+
+        private void btnAttack12_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 4;
+            Damage();
+        }
+
+        private void btnAttack13_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 5;
+            Damage();
+        }
+
+        private void btnAttack14_Click(object sender, EventArgs e)
+        {
+            intSelectedCard = 6;
+            Damage();
+        }
     }
 
     public class Card
@@ -842,7 +941,6 @@ namespace Hearthstone
         public int Attack { get; set; }
         public int Health { get; set; }
         public int ManaCost { get; set; }
-        //public int Effect { get; set; } //fix this
         public Image Picture { get; set; }
 
         public void Charge()
