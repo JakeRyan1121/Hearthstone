@@ -11,12 +11,10 @@ using System.Windows.Forms;
 //SUMMON CARD FROM HAND TO FEILD
 //HERO ABILITY
 
-
 namespace Hearthstone
 {
     public partial class Form1 : Form
     {
-        
         Card[] arrayAllCards = new Card[30];//an array holding all the spells
         Card[] arrayP1Deck = new Card[30];//an array holding the player 1 deck
         Card[] arrayP2Deck = new Card[30];//an array holding player 2 deck
@@ -409,6 +407,13 @@ namespace Hearthstone
             }
           
         }
+        public void TurnKeeper()
+        {
+            if (boolU1Turn == true)
+            {
+                pictureBox1.Enabled = true;
+            }
+        }
 
         public void HandToField2()
         {
@@ -705,8 +710,7 @@ namespace Hearthstone
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            
-            
+            intSelectedCard = 0;
             HandToField1();
             try
             {
