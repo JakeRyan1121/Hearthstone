@@ -410,11 +410,82 @@ namespace Hearthstone
             }
           
         }
+
         public void TurnKeeper()
         {
             if (boolU1Turn == true)
             {
+                pictureBox1.Enabled = false;
+                pictureBox2.Enabled = false;
+                pictureBox3.Enabled = false;
+                pictureBox4.Enabled = false;
+                pictureBox5.Enabled = false;
+                pictureBox6.Enabled = false;
+                pictureBox7.Enabled = false;
+
+                btnAttack1.Enabled = false;
+                btnAttack2.Enabled = false;
+                btnAttack3.Enabled = false;
+                btnAttack4.Enabled = false;
+                btnAttack5.Enabled = false;
+                btnAttack6.Enabled = false;
+                btnAttack7.Enabled = false;
+                lstVisualHand2.Enabled = false;
+
+
+
+                pictureBox8.Enabled = true;
+                pictureBox9.Enabled = true;
+                pictureBox10.Enabled = true;
+                pictureBox11.Enabled = true;
+                pictureBox12.Enabled = true;
+                pictureBox13.Enabled = true;
+                pictureBox14.Enabled = true;
+
+                btnAttack8.Enabled = true;
+                btnAttack9.Enabled = true;
+                btnAttack10.Enabled = true;
+                btnAttack11.Enabled = true;
+                btnAttack12.Enabled = true;
+                btnAttack13.Enabled = true;
+                btnAttack14.Enabled = true;
+                lstVisualHand.Enabled = true;
+            }
+            else
+            {
                 pictureBox1.Enabled = true;
+                pictureBox2.Enabled = true;
+                pictureBox3.Enabled = true;
+                pictureBox4.Enabled = true;
+                pictureBox5.Enabled = true;
+                pictureBox6.Enabled = true;
+                pictureBox7.Enabled = true;
+
+                btnAttack1.Enabled = true;
+                btnAttack2.Enabled = true;
+                btnAttack3.Enabled = true;
+                btnAttack4.Enabled = true;
+                btnAttack5.Enabled = true;
+                btnAttack6.Enabled = true;
+                btnAttack7.Enabled = true;
+                lstVisualHand2.Enabled = true;
+
+                pictureBox8.Enabled = false;
+                pictureBox9.Enabled = false;
+                pictureBox10.Enabled = false;
+                pictureBox11.Enabled = false;
+                pictureBox12.Enabled = false;
+                pictureBox13.Enabled = false;
+                pictureBox14.Enabled = false;
+
+                btnAttack8.Enabled = false;
+                btnAttack9.Enabled = false;
+                btnAttack10.Enabled = false;
+                btnAttack11.Enabled = false;
+                btnAttack12.Enabled = false;
+                btnAttack13.Enabled = false;
+                btnAttack14.Enabled = false;
+                lstVisualHand.Enabled = false;
             }
         }
 
@@ -544,6 +615,25 @@ namespace Hearthstone
             }
         }
 
+        public void Enable()
+        {
+            btnAttack1.Enabled = true;
+            btnAttack2.Enabled = true;
+            btnAttack3.Enabled = true;
+            btnAttack4.Enabled = true;
+            btnAttack5.Enabled = true;
+            btnAttack6.Enabled = true;
+            btnAttack7.Enabled = true;
+
+            btnAttack8.Enabled = true;
+            btnAttack9.Enabled = true;
+            btnAttack10.Enabled = true;
+            btnAttack11.Enabled = true;
+            btnAttack12.Enabled = true;
+            btnAttack13.Enabled = true;
+            btnAttack14.Enabled = true;
+        }
+        
         public void EnoughCards()
         {
             if (lstVisualHand.SelectedIndex <= -1)
@@ -565,6 +655,7 @@ namespace Hearthstone
             Health();
             lstVisualHand.SelectedIndex = 0;
             lstVisualHand2.SelectedIndex = 0;
+            TurnKeeper();
         }
 
         public void UserHeroAbility()
@@ -593,6 +684,7 @@ namespace Hearthstone
         private void btnEnd_Click(object sender, EventArgs e)
         {
             boolU1Turn = !boolU1Turn;
+            TurnKeeper();
             Mana();
             DrawCardP1();
             DrawCardP2();
@@ -888,86 +980,98 @@ namespace Hearthstone
         
         private void btnAttack1_Click(object sender, EventArgs e)
         {
-            
+            Enable();
             intAttack2 = 0;
             Damage();
         }
 
         private void btnAttack2_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack2 = 1;
             Damage();
         }
 
         private void btnAttack3_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack2 = 2;
             Damage();
         }
 
         private void btnAttack4_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack2 = 3;
             Damage();
         }
 
         private void btnAttack5_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack2 = 4;
             Damage();
         }
 
         private void btnAttack6_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack2 = 5;
             Damage();
         }
 
         private void btnAttack7_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack2 = 6;
             Damage();
         }
 
         private void btnAttack8_Click(object sender, EventArgs e)
         {
-            
+            Enable();
             intAttack1 = 0;
             Damage();
         }
 
-        private void btnattack9_Click(object sender, EventArgs e)
+        private void btnAttack9_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack1 = 1;
             Damage();
         }
 
         private void btnAttack10_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack1 = 2;
             Damage();
         }
 
         private void btnAttack11_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack1 = 3;
             Damage();
         }
 
         private void btnAttack12_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack1 = 4;
             Damage();
         }
 
         private void btnAttack13_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack1 = 5;
             Damage();
         }
 
         private void btnAttack14_Click(object sender, EventArgs e)
         {
+            Enable();
             intAttack1 = 6;
             Damage();
         }
