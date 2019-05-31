@@ -42,6 +42,9 @@ namespace Hearthstone
         int intSelectedCard = 0;
         int intSelectedBot = 0;
 
+        int intAttack1 = -1;
+        int intAttack2 = -1;
+
         int intEndOfList = 0;
 
         int intCountHand1 = 0;
@@ -444,18 +447,47 @@ namespace Hearthstone
 
         public void Damage()
         {
-            if (intSelectedCard >= 0 && intSelectedBot >= 0)
+            if (intAttack1 >= 0 && intAttack2 >= 0)
             {
-                arrayP1Field[intSelectedCard].Health -= arrayP2Field[intSelectedBot].Attack;
-                arrayP2Field[intSelectedBot].Health -= arrayP1Field[intSelectedCard].Attack;
+                MessageBox.Show(arrayP1Field[intAttack1].Health.ToString() + "\n" + arrayP2Field[intAttack2].Health.ToString());
+
+                arrayP1Field[intAttack1].Health -= arrayP2Field[intAttack2].Attack;
+                arrayP2Field[intAttack2].Health -= arrayP1Field[intAttack1].Attack;
+                MessageBox.Show(arrayP1Field[intAttack1].Health.ToString() + "\n" + arrayP2Field[intAttack2].Health.ToString());
+                intAttack1 = -1;
+                intAttack2 = -1;
+               RemoveFromField();
             }
         }
 
         public void RemoveFromField()
         {
+            for (int i = 0; i <7; i++)
+            {
+                if (arrayP1Field[i].Health <=0)
+                {
+                    arrayP1Field[i].Health = 0;
+                    arrayP1Field[i].Attack = 0;
+                    arrayP1Field[i].ManaCost = 0;
+                    arrayP1Field[i].Name = "";
+                    arrayP1Field[i].Picture = null;
+                }
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                if (arrayP2Field[j].Health <= 0)
+                {
+                    arrayP2Field[j].Health = 0;
+                    arrayP2Field[j].Attack = 0;
+                    arrayP2Field[j].ManaCost = 0;
+                    arrayP2Field[j].Name = "";
+                    arrayP2Field[j].Picture = null;
+                }
+            }
             if (arrayP1Field[0].Health <= 0)
             {
                 pictureBox8.Image = null;
+                
             }
             else if (arrayP1Field[1].Health <= 0)
             {
@@ -856,85 +888,87 @@ namespace Hearthstone
         
         private void btnAttack1_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 0;
+            
+            intAttack2 = 0;
             Damage();
         }
 
         private void btnAttack2_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 1;
+            intAttack2 = 1;
             Damage();
         }
 
         private void btnAttack3_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 2;
+            intAttack2 = 2;
             Damage();
         }
 
         private void btnAttack4_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 3;
+            intAttack2 = 3;
             Damage();
         }
 
         private void btnAttack5_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 4;
+            intAttack2 = 4;
             Damage();
         }
 
         private void btnAttack6_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 5;
+            intAttack2 = 5;
             Damage();
         }
 
         private void btnAttack7_Click(object sender, EventArgs e)
         {
-            intSelectedBot = 6;
+            intAttack2 = 6;
             Damage();
         }
 
         private void btnAttack8_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 0;
+            
+            intAttack1 = 0;
             Damage();
         }
 
         private void btnattack9_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 1;
+            intAttack1 = 1;
             Damage();
         }
 
         private void btnAttack10_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 2;
+            intAttack1 = 2;
             Damage();
         }
 
         private void btnAttack11_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 3;
+            intAttack1 = 3;
             Damage();
         }
 
         private void btnAttack12_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 4;
+            intAttack1 = 4;
             Damage();
         }
 
         private void btnAttack13_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 5;
+            intAttack1 = 5;
             Damage();
         }
 
         private void btnAttack14_Click(object sender, EventArgs e)
         {
-            intSelectedCard = 6;
+            intAttack1 = 6;
             Damage();
         }
     }
