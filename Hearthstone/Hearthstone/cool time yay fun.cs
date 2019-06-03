@@ -50,7 +50,8 @@ namespace Hearthstone
         int intCountHand1 = 0;
         int intCountHand2 = 0;
 
-        int intCountTurn = 0;
+        int intCountTurnU1 = 0;
+        int intCountTurnU2 = 0;
 
         int intCounter = 0;//declare counter for the loop
         //declaring variables for the inside of the loop
@@ -320,39 +321,60 @@ namespace Hearthstone
 
         public void DrawCardP1()
         {
-            intEndOfList = lstPlayer1.Count - 1;
+            try
+            {
+                intEndOfList = lstPlayer1.Count - 1;
 
-            lstP1Hand.Add(lstPlayer1[intEndOfList]);
+                lstP1Hand.Add(lstPlayer1[intEndOfList]);
 
-            lstPlayer1.RemoveAt(intEndOfList);
-            
-            lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name + "      " + lstP1Hand[intCountHand1].ManaCost);
+                lstPlayer1.RemoveAt(intEndOfList);
 
-            intCountHand1++;
+                lstVisualHand.Items.Add(lstP1Hand[intCountHand1].Name + "      " + lstP1Hand[intCountHand1].ManaCost);
+
+                intCountHand1++;
+            }
+            catch
+            {
+                MessageBox.Show("You ran out of cards");
+            }
         }
 
         public void DrawCardP2()
         {
-            intEndOfList = lstPlayer2.Count - 1;
+            try
+            {
+                intEndOfList = lstPlayer2.Count - 1;
 
-            lstP2Hand.Add(lstPlayer2[intEndOfList]);
+                lstP2Hand.Add(lstPlayer2[intEndOfList]);
 
-            lstPlayer2.RemoveAt(intEndOfList);
+                lstPlayer2.RemoveAt(intEndOfList);
 
-            lstVisualHand2.Items.Add(lstP2Hand[intCountHand2].Name + "      " + lstP2Hand[intCountHand2].ManaCost);
+                lstVisualHand2.Items.Add(lstP2Hand[intCountHand2].Name + "      " + lstP2Hand[intCountHand2].ManaCost);
 
-            intCountHand2++;
+                intCountHand2++;
+            }
+            catch
+            {
+                MessageBox.Show("You ran out of cards");
+            }
 
         }
 
         public void Mana()
         {
-            intCountTurn++;
-
-            if (intCountTurn <= 10)
+            if (boolU1Turn == true)
             {
-                intMana1 = intCountTurn;
-                intMana2 = intCountTurn;
+                intCountTurnU1++;
+            }
+            else
+            {
+                intCountTurnU2++;
+            }
+
+            if (intCountTurnU1 <= 10 && intCountTurnU2 <= 10)
+            {
+                intMana1 = intCountTurnU1;
+                intMana2 = intCountTurnU2;
             }
             else
             {
@@ -527,7 +549,7 @@ namespace Hearthstone
                 MessageBox.Show(arrayP1Field[intAttack1].Health.ToString() + "\n" + arrayP2Field[intAttack2].Health.ToString());
                 intAttack1 = -1;
                 intAttack2 = -1;
-               RemoveFromField();
+                RemoveFromField();
             }
         }
 
@@ -560,27 +582,27 @@ namespace Hearthstone
                 pictureBox8.Image = null;
                 
             }
-            else if (arrayP1Field[1].Health <= 0)
+            if (arrayP1Field[1].Health <= 0)
             {
                 pictureBox9.Image = null;
             }
-            else if (arrayP1Field[2].Health <= 0)
+            if (arrayP1Field[2].Health <= 0)
             {
                 pictureBox10.Image = null;
             }
-            else if (arrayP1Field[3].Health <= 0)
+            if (arrayP1Field[3].Health <= 0)
             {
                 pictureBox11.Image = null;
             }
-            else if (arrayP1Field[4].Health <= 0)
+            if (arrayP1Field[4].Health <= 0)
             {
                 pictureBox12.Image = null;
             }
-            else if (arrayP1Field[5].Health <= 0)
+            if (arrayP1Field[5].Health <= 0)
             {
                 pictureBox13.Image = null;
             }
-            else if (arrayP1Field[6].Health <= 0)
+            if (arrayP1Field[6].Health <= 0)
             {
                 pictureBox14.Image = null;
             }
@@ -589,27 +611,27 @@ namespace Hearthstone
             {
                 pictureBox1.Image = null;
             }
-            else if (arrayP2Field[1].Health <= 0)
+            if (arrayP2Field[1].Health <= 0)
             {
                 pictureBox2.Image = null;
             }
-            else if (arrayP2Field[2].Health <= 0)
+            if (arrayP2Field[2].Health <= 0)
             {
                 pictureBox3.Image = null;
             }
-            else if (arrayP2Field[3].Health <= 0)
+            if (arrayP2Field[3].Health <= 0)
             {
                 pictureBox4.Image = null;
             }
-            else if (arrayP2Field[4].Health <= 0)
+            if (arrayP2Field[4].Health <= 0)
             {
                 pictureBox5.Image = null;
             }
-            else if (arrayP2Field[5].Health <= 0)
+            if (arrayP2Field[5].Health <= 0)
             {
                 pictureBox6.Image = null;
             }
-            else if (arrayP2Field[6].Health <= 0)
+            if (arrayP2Field[6].Health <= 0)
             {
                 pictureBox7.Image = null;
             }
@@ -686,8 +708,16 @@ namespace Hearthstone
             boolU1Turn = !boolU1Turn;
             TurnKeeper();
             Mana();
-            DrawCardP1();
-            DrawCardP2();
+
+            if (boolU1Turn == true)
+            {
+                DrawCardP1();
+            }
+            else
+            {
+                DrawCardP2();
+            }
+            
             intSelectedBot = -1;
             intSelectedCard = -1;
         }
@@ -973,10 +1003,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            UserHeroAbility();
-        }
+        
         
         private void btnAttack1_Click(object sender, EventArgs e)
         {
@@ -1074,6 +1101,21 @@ namespace Hearthstone
             Enable();
             intAttack1 = 6;
             Damage();
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            if (boolU1Turn == true)
+            {
+                UserHeroAbility();
+            }
+        }
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            if (boolU1Turn == false)
+            {
+                BotHeroAbility();
+            }
         }
     }
 

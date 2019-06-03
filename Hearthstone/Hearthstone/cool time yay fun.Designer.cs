@@ -170,11 +170,14 @@
             // 
             // pictureBox16
             // 
+            this.pictureBox16.Image = global::Hearthstone.Properties.Resources.Rexxar_484_;
             this.pictureBox16.Location = new System.Drawing.Point(626, 3);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(147, 124);
+            this.pictureBox16.Size = new System.Drawing.Size(147, 196);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 25;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // pictureBox14
             // 
