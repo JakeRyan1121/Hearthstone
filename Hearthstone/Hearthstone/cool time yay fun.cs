@@ -37,7 +37,9 @@ namespace Hearthstone
 
         bool blnEnough1;
         bool blnEnough2;
-        bool boolU1Turn = true;
+        bool blnU1Turn = true;
+        bool blnDidAttack1 = false;
+        bool blnDidAttack2 = false;
 
         int intSelectedCard = 0;
         int intSelectedBot = 0;
@@ -335,7 +337,7 @@ namespace Hearthstone
             }
             catch
             {
-                MessageBox.Show("You ran out of cards");
+                MessageBox.Show("Player1's deck is empty");
             }
         }
 
@@ -355,14 +357,14 @@ namespace Hearthstone
             }
             catch
             {
-                MessageBox.Show("You ran out of cards");
+                MessageBox.Show("Player2's deck is empty");
             }
 
         }
 
         public void Mana()
         {
-            if (boolU1Turn == true)
+            if (blnU1Turn == true)
             {
                 intCountTurnU1++;
             }
@@ -385,20 +387,7 @@ namespace Hearthstone
             lblMana1.Text = Convert.ToString(intMana1);
             lblMana2.Text = Convert.ToString(intMana2);
         }
-
-        public void Effects()
-        {
-            for (int E = 0; E < lstVisualHand.Items.Count; E++)
-            {
-                if (lstP1Hand[lstVisualHand.SelectedIndex].Name == "Wolfrider")
-                {
-                    lstP1Hand[E].Charge();
-                }
-                
-            }
-
-        }
-
+        
         public void Health()
         {
             lblHealth1.Text = Convert.ToString(intHealth1);
@@ -435,7 +424,7 @@ namespace Hearthstone
 
         public void TurnKeeper()
         {
-            if (boolU1Turn == true)
+            if (blnU1Turn == true)
             {
                 pictureBox1.Enabled = false;
                 pictureBox2.Enabled = false;
@@ -654,6 +643,9 @@ namespace Hearthstone
             btnAttack12.Enabled = true;
             btnAttack13.Enabled = true;
             btnAttack14.Enabled = true;
+
+            btnTarget1.Enabled = true;
+            btnTarget2.Enabled = true;
         }
         
         public void EnoughCards()
@@ -705,11 +697,11 @@ namespace Hearthstone
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
-            boolU1Turn = !boolU1Turn;
+            blnU1Turn = !blnU1Turn;
             TurnKeeper();
             Mana();
 
-            if (boolU1Turn == true)
+            if (blnU1Turn == true)
             {
                 DrawCardP1();
             }
@@ -720,6 +712,10 @@ namespace Hearthstone
             
             intSelectedBot = -1;
             intSelectedCard = -1;
+            intAttack1 = -1;
+            intAttack2 = -1;
+            blnDidAttack1 = false;
+            blnDidAttack2 = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -1105,18 +1101,74 @@ namespace Hearthstone
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            if (boolU1Turn == true)
+            if (blnU1Turn == true)
             {
                 UserHeroAbility();
             }
         }
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            if (boolU1Turn == false)
+            if (blnU1Turn == false)
             {
                 BotHeroAbility();
             }
         }
+
+        private void btnTarget1_Click(object sender, EventArgs e)
+        {
+            if (blnDidAttack2 == false)
+            {
+                intHealth1 -= arrayP2Field[intAttack2].Attack;
+                Health();
+                blnDidAttack2 = true;
+            }
+            else
+            {
+                MessageBox.Show("You have already attacked directly this turn");
+            }
+
+            intAttack1 = -1;
+            intAttack2 = -1;
+        }
+
+        private void btnTarget2_Click(object sender, EventArgs e)
+        {
+            if (blnDidAttack1 == false)
+            {
+                intHealth2 -= arrayP1Field[intAttack1].Attack;
+                Health();
+                blnDidAttack1 = true;
+            }
+            else
+            {
+                MessageBox.Show("You have already attacked directly this turn");
+            }
+
+            intAttack1 = -1;
+            intAttack2 = -1;
+        }
+
+        private void lblMana1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHealth1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void lblMana2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHealth2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 
     public class Card
@@ -1125,14 +1177,6 @@ namespace Hearthstone
         public int Attack { get; set; }
         public int Health { get; set; }
         public int ManaCost { get; set; }
-        public Image Picture { get; set; }
-
-        public void Charge()
-        {
-            MessageBox.Show("testy testhole");
-        }
+        public Image Picture { get; set; }        
     }
 }
-
-
-
