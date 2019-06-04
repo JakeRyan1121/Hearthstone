@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Josh,
+//6-4-2019
+//Hearthstone 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,54 +19,54 @@ namespace Hearthstone
     public partial class Form1 : Form
     {
         Card[] arrayAllCards = new Card[30];//an array holding all the spells
-        Card[] arrayP1Deck = new Card[30];//an array holding the player 1 deck
-        Card[] arrayP2Deck = new Card[30];//an array holding player 2 deck
+        Card[] arrayP1Deck = new Card[30];//an array holding the player 1 shuffled deck
+        Card[] arrayP2Deck = new Card[30];//an array holding player 2 shuffled deck
 
-        Card[] arrayP1Field = new Card[7];
-        Card[] arrayP2Field = new Card[7];
+        Card[] arrayP1Field = new Card[7];//the array for the player 1 field
+        Card[] arrayP2Field = new Card[7];//the array for the player 2 field
 
-        Random randomCard = new Random();
+        Random randomCard = new Random();//random number generator for the deck shuffle
 
-        List<Card> lstPlayer1 = new List<Card>();
-        List<Card> lstPlayer2 = new List<Card>();
+        List<Card> lstPlayer1 = new List<Card>();//the list for the player 1 shuffled deck
+        List<Card> lstPlayer2 = new List<Card>();//the list for the player 2 shuffled deck
 
-        List<Card> lstP1Hand = new List<Card>();
-        List<Card> lstP2Hand = new List<Card>();
+        List<Card> lstP1Hand = new List<Card>();//the list for the player 1 hand
+        List<Card> lstP2Hand = new List<Card>();//the list for the player 2 hand
 
-        int intHealth1 = 30;
-        int intHealth2 = 30;
-        int intMana1 = 0;
-        int intMana2 = 0;
+        int intHealth1 = 30;//the health for the player 1
+        int intHealth2 = 30;//the health for the player 2
+        int intMana1 = 0;//the mana for player 1
+        int intMana2 = 0;//the mana for player 2
 
-        bool blnEnough1;
-        bool blnEnough2;
-        bool blnU1Turn = true;
-        bool blnDidAttack1 = false;
-        bool blnDidAttack2 = false;
+        bool blnEnough1;//does player 1 have cards in their hand
+        bool blnEnough2;//does player 2 have cards in their hand
+        bool blnU1Turn = true;//is it player 1's turn 
+        bool blnDidAttack1 = false;//did player 1 attack directly 
+        bool blnDidAttack2 = false;//did player 2 attack directly 
 
-        int intSelectedCard = 0;
-        int intSelectedBot = 0;
+        int intSelectedCard = 0;//the selected card on the player 1 field
+        int intSelectedBot = 0;//the selected card on the player 2 field
 
-        int intAttack1 = -1;
-        int intAttack2 = -1;
+        int intAttack1 = -1;//the selected attacker on player 1 field
+        int intAttack2 = -1;//the selected attacker on player 2 field
 
-        int intEndOfList = 0;
+        int intEndOfList = 0;//
 
-        int intCountHand1 = 0;
-        int intCountHand2 = 0;
+        int intCountHand1 = 0;//the amount of cards in player 1 hand
+        int intCountHand2 = 0;//the amount of cards in player 2 hand
 
-        int intCountTurnU1 = 0;
-        int intCountTurnU2 = 0;
+        int intCountTurnU1 = 0;//counts player 1 turns
+        int intCountTurnU2 = 0;//counts player 1 turns
 
-        int intCounter = 0;//declare counter for the loop
-        //declaring variables for the inside of the loop
-        int int1stHalf = 0;
-        int int2ndHalf = 0;
-        int intAttackHolder = 0;
-        int intManaCostHolder = 0;
-        int intHealthHolder = 0;
-        string strNameHolder = "";
-        Image imgHolder = null;
+        //below is the holders for the deck shuffle
+        int intCounter = 0;//declare counter for the shuffle loop
+        int int1stHalf = 0;//holds the 1st half the deck
+        int int2ndHalf = 0;//holds the 2nd half the deck
+        int intAttackHolder = 0;//holds the attack value
+        int intManaCostHolder = 0;//holds the mana cost 
+        int intHealthHolder = 0;//holds the health value
+        string strNameHolder = "";//holds the name of the cards
+        Image imgHolder = null;//holds the picture of the cards
 
         public Form1()
         {
@@ -72,19 +75,20 @@ namespace Hearthstone
 
         public void StartUp()
         {
-            for (int i = 0; i < 30; i++)//loop to instanceiate the array of all spells
+            for (int i = 0; i < 30; i++)//loop to instanceiate the array of all cards
             {
                 arrayAllCards[i] = new Card();
                 arrayP1Deck[i] = new Card();
                 arrayP2Deck[i] = new Card();              
             }
 
-            for (int i = 0; i < 7; i++)//loop to instanceiate the array of all spells
+            for (int i = 0; i < 7; i++)//loop to instanceiate the field holders
             {
                 arrayP1Field[i] = new Card();
                 arrayP2Field[i] = new Card();
             }
 
+            //sets all of the cards stats (name, attack, health, mana, and picture)
             arrayAllCards[0].Name = "Bloodfen Raptor";
             arrayAllCards[1].Name = "Boulderfist Ogre";
             arrayAllCards[2].Name = "Murlock Raider";
@@ -241,7 +245,7 @@ namespace Hearthstone
             arrayAllCards[29].Picture = Properties.Resources.Pyromaniac;
             
         }
-        public void DeckShuffle()
+        public void DeckShuffle()//shuffles the deck
         {
             while (intCounter < 30)//shuffle loop
             {
@@ -255,8 +259,7 @@ namespace Hearthstone
                 intHealthHolder = arrayAllCards[int1stHalf].Health;
                 strNameHolder = arrayAllCards[int1stHalf].Name;
                 imgHolder = arrayAllCards[int1stHalf].Picture;
-                //test message
-
+                
                 //STEP 3: REPLACING 1ST HALF WITH 2ND HALF
                 arrayAllCards[int1stHalf].Attack = arrayAllCards[int2ndHalf].Attack;
                 arrayAllCards[int1stHalf].ManaCost = arrayAllCards[int2ndHalf].ManaCost;
@@ -271,15 +274,13 @@ namespace Hearthstone
                 arrayAllCards[int2ndHalf].Name = strNameHolder;
                 arrayAllCards[int2ndHalf].Picture = imgHolder;
 
-                //test message after switch
-
                 intCounter++;//add to counter
             }
             intCounter = 0;
 
         }
 
-        public void Player1List()
+        public void Player1List()//shuffles the deck and copies it to the player1 array and list deck
         {
             DeckShuffle();
 
@@ -294,13 +295,14 @@ namespace Hearthstone
 
             lstPlayer1.AddRange(arrayP1Deck);
 
+            //draws 4 cards to start the game
             for (int i = 0; i < 4; i++)
             {
                 DrawCardP1();
             }
 
         }
-        public void Player2List()
+        public void Player2List()//shuffles the deck and copies it to the player1 array and list deck
         {
             DeckShuffle();
 
@@ -315,13 +317,14 @@ namespace Hearthstone
 
             lstPlayer2.AddRange(arrayP2Deck);
 
+            //draws 4 cards to start the game
             for (int i = 0; i < 4; i++)
             {
                 DrawCardP2();
             }
         }
 
-        public void DrawCardP1()
+        public void DrawCardP1()//draws 1 card from the last card(top) of the player 1 deck
         {
             try
             {
@@ -341,7 +344,7 @@ namespace Hearthstone
             }
         }
 
-        public void DrawCardP2()
+        public void DrawCardP2()//draws 1 card from the last card(top) of the player 2 deck
         {
             try
             {
@@ -362,7 +365,7 @@ namespace Hearthstone
 
         }
 
-        public void Mana()
+        public void Mana()//gives the users 1 more mana then the user had the previous turn, capped at 10 mana a turn
         {
             if (blnU1Turn == true)
             {
@@ -388,13 +391,13 @@ namespace Hearthstone
             lblMana2.Text = Convert.ToString(intMana2);
         }
         
-        public void Health()
+        public void Health()//updates the health values
         {
             lblHealth1.Text = Convert.ToString(intHealth1);
             lblHealth2.Text = Convert.ToString(intHealth2);
         }
 
-        public void HandToField1()
+        public void HandToField1()//shows the player 1's card on the field when they play a card
         {
             try
             {
@@ -403,6 +406,7 @@ namespace Hearthstone
                     intMana1 = intMana1 - lstP1Hand[lstVisualHand.SelectedIndex].ManaCost;
                     lblMana1.Text = Convert.ToString(intMana1);
 
+                    //puts the cards values in the field array
                     arrayP1Field[intSelectedCard].Name = lstP1Hand[lstVisualHand.SelectedIndex].Name;
                     arrayP1Field[intSelectedCard].Attack = lstP1Hand[lstVisualHand.SelectedIndex].Attack;
                     arrayP1Field[intSelectedCard].Health = lstP1Hand[lstVisualHand.SelectedIndex].Health;
@@ -422,7 +426,35 @@ namespace Hearthstone
           
         }
 
-        public void TurnKeeper()
+        public void HandToField2() //shows the player 1's card on the field when they play a card
+        {
+            try
+            {
+                if (lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost <= intMana2)
+                {
+                    intMana2 = intMana2 - lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost;
+                    lblMana2.Text = Convert.ToString(intMana2);
+
+                    //puts the cards values in the field array
+                    arrayP2Field[intSelectedBot].Name = lstP2Hand[lstVisualHand2.SelectedIndex].Name;
+                    arrayP2Field[intSelectedBot].Attack = lstP2Hand[lstVisualHand2.SelectedIndex].Attack;
+                    arrayP2Field[intSelectedBot].Health = lstP2Hand[lstVisualHand2.SelectedIndex].Health;
+                    arrayP2Field[intSelectedBot].ManaCost = lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost;
+                    intCountHand2--;
+                    blnEnough2 = true;
+                }
+                else
+                {
+                    blnEnough2 = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Your hand is empty");
+            }
+        }
+
+        public void TurnKeeper()//enables the buttons when it is the player's turn
         {
             if (blnU1Turn == true)
             {
@@ -500,34 +532,7 @@ namespace Hearthstone
             }
         }
 
-        public void HandToField2()
-        {
-            try
-            {
-                if (lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost <= intMana2)
-                {
-                    intMana2 = intMana2 - lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost;
-                    lblMana2.Text = Convert.ToString(intMana2);
-
-                    arrayP2Field[intSelectedBot].Name = lstP2Hand[lstVisualHand2.SelectedIndex].Name;
-                    arrayP2Field[intSelectedBot].Attack = lstP2Hand[lstVisualHand2.SelectedIndex].Attack;
-                    arrayP2Field[intSelectedBot].Health = lstP2Hand[lstVisualHand2.SelectedIndex].Health;
-                    arrayP2Field[intSelectedBot].ManaCost = lstP2Hand[lstVisualHand2.SelectedIndex].ManaCost;
-                    intCountHand2--;
-                    blnEnough2 = true;
-                }
-                else
-                {
-                    blnEnough2 = false;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Your hand is empty");
-            }
-        }
-
-        private void WinCondition()
+        private void WinCondition()//shows when a player wins
         {
             if (intHealth1 <= 0)
             {
@@ -539,7 +544,7 @@ namespace Hearthstone
             }
         }
 
-        public void Damage()
+        public void Damage()//calculates the damage
         {
             if (intAttack1 >= 0 && intAttack2 >= 0)
             {
@@ -552,7 +557,7 @@ namespace Hearthstone
             }
         }
 
-        public void RemoveFromField()
+        public void RemoveFromField()//removes the card from the field when it is dead
         {
             for (int i = 0; i <7; i++)
             {
@@ -636,7 +641,7 @@ namespace Hearthstone
             }
         }
 
-        public void Enable()
+        public void Enable()//enables buttons 
         {
             btnAttack1.Enabled = true;
             btnAttack2.Enabled = true;
@@ -658,19 +663,7 @@ namespace Hearthstone
             btnTarget2.Enabled = true;
         }
         
-        public void EnoughCards()
-        {
-            if (lstVisualHand.SelectedIndex <= -1)
-            {
-                pictureBox8.Enabled = false;
-            }
-            else 
-            {
-                pictureBox8.Enabled = true;
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)//what happens during startup
         {
             StartUp();
             Player1List();
@@ -682,7 +675,7 @@ namespace Hearthstone
             TurnKeeper();
         }
 
-        public void UserHeroAbility()
+        public void UserHeroAbility()//uses the player 1's hero ability
         {
             if (intMana1 >= 2)
             {
@@ -693,7 +686,7 @@ namespace Hearthstone
             }
         }
 
-        public void BotHeroAbility()
+        public void BotHeroAbility()//uses the player 2's hero ability
         {
             if (intMana2 >= 2)
             {
@@ -705,7 +698,7 @@ namespace Hearthstone
             }
         }
 
-        private void btnEnd_Click(object sender, EventArgs e)
+        private void btnEnd_Click(object sender, EventArgs e)//the users end the turn the blnU1Turn toggles, mana is set, and a card is drawn
         {
             blnU1Turn = !blnU1Turn;
             TurnKeeper();
@@ -728,7 +721,7 @@ namespace Hearthstone
             blnDidAttack2 = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 0;
             HandToField2();
@@ -748,7 +741,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 1;
             HandToField2();
@@ -768,7 +761,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 2;
             HandToField2();
@@ -788,7 +781,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 3;
             HandToField2();
@@ -808,7 +801,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 4;
             HandToField2();
@@ -828,7 +821,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 5;
             HandToField2();
@@ -848,7 +841,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)//a player 2 field slot
         {
             intSelectedBot = 6;
             HandToField2();
@@ -868,7 +861,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void pictureBox8_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 0;
             HandToField1();
@@ -889,7 +882,7 @@ namespace Hearthstone
             
         }
 
-        private void pictureBox9_Click(object sender, EventArgs e)
+        private void pictureBox9_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 1;
             HandToField1();
@@ -909,7 +902,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void pictureBox10_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 2;
             HandToField1();
@@ -929,7 +922,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
+        private void pictureBox11_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 3;
             HandToField1();
@@ -949,7 +942,7 @@ namespace Hearthstone
             }
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
+        private void pictureBox12_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 4;
             HandToField1();
@@ -969,7 +962,7 @@ namespace Hearthstone
             }
         }
         
-        private void pictureBox13_Click(object sender, EventArgs e)
+        private void pictureBox13_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 5;
             HandToField1();
@@ -989,7 +982,7 @@ namespace Hearthstone
             }
         }
         
-        private void pictureBox14_Click(object sender, EventArgs e)
+        private void pictureBox14_Click(object sender, EventArgs e)//a player 1 field slot
         {
             intSelectedCard = 6;
             HandToField1();
@@ -1011,105 +1004,105 @@ namespace Hearthstone
 
         
         
-        private void btnAttack1_Click(object sender, EventArgs e)
+        private void btnAttack1_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 0;
             Damage();
         }
 
-        private void btnAttack2_Click(object sender, EventArgs e)
+        private void btnAttack2_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 1;
             Damage();
         }
 
-        private void btnAttack3_Click(object sender, EventArgs e)
+        private void btnAttack3_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 2;
             Damage();
         }
 
-        private void btnAttack4_Click(object sender, EventArgs e)
+        private void btnAttack4_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 3;
             Damage();
         }
 
-        private void btnAttack5_Click(object sender, EventArgs e)
+        private void btnAttack5_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 4;
             Damage();
         }
 
-        private void btnAttack6_Click(object sender, EventArgs e)
+        private void btnAttack6_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 5;
             Damage();
         }
 
-        private void btnAttack7_Click(object sender, EventArgs e)
+        private void btnAttack7_Click(object sender, EventArgs e)//a attack button for the player 2 field
         {
             Enable();
             intAttack2 = 6;
             Damage();
         }
 
-        private void btnAttack8_Click(object sender, EventArgs e)
+        private void btnAttack8_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 0;
             Damage();
         }
 
-        private void btnAttack9_Click(object sender, EventArgs e)
+        private void btnAttack9_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 1;
             Damage();
         }
 
-        private void btnAttack10_Click(object sender, EventArgs e)
+        private void btnAttack10_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 2;
             Damage();
         }
 
-        private void btnAttack11_Click(object sender, EventArgs e)
+        private void btnAttack11_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 3;
             Damage();
         }
 
-        private void btnAttack12_Click(object sender, EventArgs e)
+        private void btnAttack12_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 4;
             Damage();
         }
 
-        private void btnAttack13_Click(object sender, EventArgs e)
+        private void btnAttack13_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 5;
             Damage();
         }
 
-        private void btnAttack14_Click(object sender, EventArgs e)
+        private void btnAttack14_Click(object sender, EventArgs e)//a attack button for the player 1 field
         {
             Enable();
             intAttack1 = 6;
             Damage();
         }
 
-        private void pictureBox15_Click(object sender, EventArgs e)
+        private void pictureBox15_Click(object sender, EventArgs e)//the player 1 hero
         {
             if (blnU1Turn == true)
             {
@@ -1117,7 +1110,7 @@ namespace Hearthstone
                 WinCondition();
             }
         }
-        private void pictureBox16_Click(object sender, EventArgs e)
+        private void pictureBox16_Click(object sender, EventArgs e)//the player 2 hero
         {
             if (blnU1Turn == false)
             {
@@ -1126,7 +1119,7 @@ namespace Hearthstone
             }
         }
 
-        private void btnTarget1_Click(object sender, EventArgs e)
+        private void btnTarget1_Click(object sender, EventArgs e)//attacks the player 1 directly
         {
             try
             {
@@ -1153,7 +1146,7 @@ namespace Hearthstone
             WinCondition();
         }
 
-        private void btnTarget2_Click(object sender, EventArgs e)
+        private void btnTarget2_Click(object sender, EventArgs e)//attacks the player 2 directly
         {
             try
             {
@@ -1203,7 +1196,7 @@ namespace Hearthstone
         
     }
 
-    public class Card
+    public class Card//oBjEcT
     {
         public string Name { get; set; }
         public int Attack { get; set; }
