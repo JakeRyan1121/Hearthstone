@@ -527,15 +527,25 @@ namespace Hearthstone
             }
         }
 
+        private void WinCondition()
+        {
+            if (intHealth1 <= 0)
+            {
+                MessageBox.Show("Player 2 has won!");
+            }
+            if (intHealth2 <= 0)
+            {
+                MessageBox.Show("Player 1 has won!");
+            }
+        }
+
         public void Damage()
         {
             if (intAttack1 >= 0 && intAttack2 >= 0)
             {
-                MessageBox.Show(arrayP1Field[intAttack1].Health.ToString() + "\n" + arrayP2Field[intAttack2].Health.ToString());
-
                 arrayP1Field[intAttack1].Health -= arrayP2Field[intAttack2].Attack;
                 arrayP2Field[intAttack2].Health -= arrayP1Field[intAttack1].Attack;
-                MessageBox.Show(arrayP1Field[intAttack1].Health.ToString() + "\n" + arrayP2Field[intAttack2].Health.ToString());
+                MessageBox.Show(arrayP2Field[intAttack2].Health.ToString() + "\n" + arrayP1Field[intAttack1].Health.ToString());
                 intAttack1 = -1;
                 intAttack2 = -1;
                 RemoveFromField();
@@ -1104,6 +1114,7 @@ namespace Hearthstone
             if (blnU1Turn == true)
             {
                 UserHeroAbility();
+                WinCondition();
             }
         }
         private void pictureBox16_Click(object sender, EventArgs e)
@@ -1111,41 +1122,62 @@ namespace Hearthstone
             if (blnU1Turn == false)
             {
                 BotHeroAbility();
+                WinCondition();
             }
         }
 
         private void btnTarget1_Click(object sender, EventArgs e)
         {
-            if (blnDidAttack2 == false)
+            try
             {
-                intHealth1 -= arrayP2Field[intAttack2].Attack;
-                Health();
-                blnDidAttack2 = true;
-            }
-            else
-            {
-                MessageBox.Show("You have already attacked directly this turn");
-            }
+                if (blnDidAttack2 == false)
+                {
+                    intHealth1 -= arrayP2Field[intAttack2].Attack;
+                    Health();
+                    blnDidAttack2 = true;
+                }
+                else
+                {
+                    MessageBox.Show("You have already attacked directly this turn");
+                }
 
-            intAttack1 = -1;
-            intAttack2 = -1;
+                intAttack1 = -1;
+                intAttack2 = -1;
+                btnTarget1.Enabled = false;
+                btnTarget2.Enabled = false;
+            }
+            catch
+            {
+
+            }
+            WinCondition();
         }
 
         private void btnTarget2_Click(object sender, EventArgs e)
         {
-            if (blnDidAttack1 == false)
+            try
             {
-                intHealth2 -= arrayP1Field[intAttack1].Attack;
-                Health();
-                blnDidAttack1 = true;
-            }
-            else
-            {
-                MessageBox.Show("You have already attacked directly this turn");
-            }
+                if (blnDidAttack1 == false)
+                {
+                    intHealth2 -= arrayP1Field[intAttack1].Attack;
+                    Health();
+                    blnDidAttack1 = true;
+                }
+                else
+                {
+                    MessageBox.Show("You have already attacked directly this turn");
+                }
 
-            intAttack1 = -1;
-            intAttack2 = -1;
+                intAttack1 = -1;
+                intAttack2 = -1;
+                btnTarget1.Enabled = false;
+                btnTarget2.Enabled = false;
+            }
+            catch
+            {
+
+            }
+            WinCondition();
         }
 
         private void lblMana1_Click(object sender, EventArgs e)
