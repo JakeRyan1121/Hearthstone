@@ -1,4 +1,4 @@
-﻿//Josh,
+﻿//Josh, Wyatt, Iyan, and Jake  
 //6-4-2019
 //Hearthstone 
 using System;
@@ -10,9 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-//SUMMON CARD FROM HAND TO FEILD
-//HERO ABILITY
 
 namespace Hearthstone
 {
